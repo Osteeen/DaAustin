@@ -3,7 +3,7 @@ import React from 'react';
 export const PulsingIndicator: React.FC<{ size?: 'sm' | 'md' }> = ({ size = 'md' }) => {
   const containerClasses = size === 'sm' ? 'w-4 h-4' : 'w-6 h-6';
   const dotClasses = size === 'sm' ? 'w-2 h-2' : 'w-3 h-3';
-  
+
   return (
     <div className={`relative flex items-center justify-center ${containerClasses}`}>
       <div className="absolute w-full h-full rounded-full bg-cyan-400 opacity-75 pulse-ring"></div>

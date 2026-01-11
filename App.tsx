@@ -33,10 +33,9 @@ const App: React.FC = () => {
             <div className="absolute inset-0 bg-cyan-500 rounded-3xl blur-2xl opacity-10 group-hover:opacity-20 transition-opacity cursor-pointer"></div>
             <div
               className="w-32 h-32 md:w-40 md:h-40 rounded-3xl border-2 border-neutral-200 dark:border-neutral-800 bg-neutral-900 overflow-hidden relative flex items-center justify-center transition-all duration-500 shadow-2xl theme-transition cursor-pointer"
-              style={{ transform: 'translateZ(0)' }}
             >
               <img
-                src={`${(import.meta as any).env.BASE_URL}Picture.JPG`}
+                src={`${(import.meta as any).env.BASE_URL}Picture-optimized.jpg`}
                 alt="Austin John"
                 className="w-full h-full object-cover"
                 loading="eager"

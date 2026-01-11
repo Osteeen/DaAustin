@@ -75,61 +75,66 @@
             font-family: 'JetBrains Mono', monospace;
         }
 
+        /* Safari-optimized pulse animations with hardware acceleration */
         @keyframes pulse-ring {
             0% {
-                transform: scale(.33);
+                transform: scale3d(.33, .33, 1);
+                opacity: 0.75;
             }
 
             80%,
             100% {
+                transform: scale3d(1, 1, 1);
                 opacity: 0;
             }
         }
 
         @keyframes pulse-dot {
             0% {
-                transform: scale(.8);
+                transform: scale3d(.8, .8, 1);
             }
 
             50% {
-                transform: scale(1);
+                transform: scale3d(1, 1, 1);
             }
 
             100% {
-                transform: scale(.8);
+                transform: scale3d(.8, .8, 1);
             }
         }
 
         .pulse-ring {
             animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+            will-change: transform, opacity;
         }
 
         .pulse-dot {
             animation: pulse-dot 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s infinite;
+            will-change: transform;
         }
 
-        /* Modal Animations */
+        /* Safari-optimized modal animations with translate3d for hardware acceleration */
         @keyframes modal-scale-up {
             from {
                 opacity: 0;
-                transform: scale(0.9) translateY(20px);
+                transform: scale3d(0.95, 0.95, 1) translate3d(0, 20px, 0);
             }
 
             to {
                 opacity: 1;
-                transform: scale(1) translateY(0);
+                transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
             }
         }
 
         @keyframes modal-scale-down {
             from {
                 opacity: 1;
-                transform: scale(1) translateY(0);
+                transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
             }
 
             to {
                 opacity: 0;
-                transform: scale(0.95) translateY(10px);
+                transform: scale3d(0.97, 0.97, 1) translate3d(0, 10px, 0);
             }
         }
 
@@ -154,19 +159,21 @@
         }
 
         .animate-modal-entry {
-            animation: modal-scale-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            animation: modal-scale-up 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            will-change: transform, opacity;
         }
 
         .animate-modal-exit {
-            animation: modal-scale-down 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            animation: modal-scale-down 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            will-change: transform, opacity;
         }
 
         .animate-backdrop-entry {
-            animation: backdrop-fade-in 0.5s ease forwards;
+            animation: backdrop-fade-in 0.3s ease forwards;
         }
 
         .animate-backdrop-exit {
-            animation: backdrop-fade-out 0.4s ease forwards;
+            animation: backdrop-fade-out 0.25s ease forwards;
         }
 
         ::-webkit-scrollbar {
@@ -193,17 +200,38 @@
         @keyframes page-entry {
             from {
                 opacity: 0;
-                transform: translateY(20px);
+                transform: translate3d(0, 20px, 0);
             }
 
             to {
                 opacity: 1;
-                transform: translateY(0);
+                transform: translate3d(0, 0, 0);
             }
         }
 
         .animate-page-entry {
             animation: page-entry 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+        }
+
+        /* Performance optimization: contain layout for isolated components */
+        .modal-container {
+            contain: layout style paint;
+        }
+
+        /* Reduce backdrop-filter usage for Safari performance */
+        .backdrop-blur-light {
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+
+        .backdrop-blur-heavy {
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+
+        /* Safari-optimized hover scale effect */
+        .group:hover .hover-scale-safari {
+            transform: scale(1.1);
         }
     </style>
     <script type="importmap">

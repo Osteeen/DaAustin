@@ -1,6 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { Project } from '../types';
 
+// Cache scrollbar width to avoid recalculation on every modal open
+let cachedScrollbarWidth: number | null = null;
+
+const getScrollbarWidth = (): number => {
+  if (cachedScrollbarWidth !== null) {
+    return cachedScrollbarWidth;
+  }
+  cachedScrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+  return cachedScrollbarWidth;
+};
+
 interface ProjectCardProps {
   project: Project;
 }
@@ -12,7 +23,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   // Toggle modal-open on the document body to lock scroll reliably.
   useEffect(() => {
     if (active) {
-      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+      const scrollbarWidth = getScrollbarWidth();
       document.body.style.paddingRight = `${scrollbarWidth}px`;
       document.body.classList.add('modal-open');
     } else {
@@ -32,11 +43,11 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 
   const handleClose = () => {
     setIsClosing(true);
-    // Wait for the exit animation duration (400ms) before unmounting the modal content
+    // Wait for the exit animation duration (300ms) before unmounting the modal content
     setTimeout(() => {
       setActive(false);
       setIsClosing(false);
-    }, 400);
+    }, 300);
   };
 
   return (
@@ -44,10 +55,10 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       <div className="group relative flex flex-col h-full bg-white dark:bg-neutral-900/40 hover:bg-neutral-50 dark:hover:bg-neutral-900/60 transition-all duration-300 border border-neutral-200 dark:border-neutral-800 hover:border-cyan-500/20 dark:hover:border-neutral-700 overflow-hidden rounded-[2rem] theme-transition">
         {/* Placeholder Header Section */}
         <div className="relative h-64 overflow-hidden bg-neutral-100 dark:bg-neutral-800 flex items-center justify-center p-8 transition-colors">
-          {/* Background Image with Zoom Effect */}
+          {/* Background Image with Zoom Effect - Optimized for Safari */}
           <div
-            className="absolute inset-0 bg-cover bg-top opacity-30 group-hover:opacity-50 group-hover:scale-110 transition-all duration-700 ease-out"
-            style={{ backgroundImage: `url(${(import.meta as any).env.BASE_URL}tsibg.png)` }}
+            className="absolute inset-0 bg-cover bg-top opacity-30 group-hover:opacity-50 hover-scale-safari transition-all duration-700 ease-out will-change-transform"
+            style={{ backgroundImage: `url(${(import.meta as any).env.BASE_URL}tsibg-optimized.png)` }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-[#0a0a0a] via-white/80 dark:via-[#0a0a0a]/80 to-transparent"></div>
           <div className="absolute bottom-6 left-8 right-8 z-20">
@@ -108,15 +119,14 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       {/* Deep Dive Modal */}
       {active && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-12 overflow-hidden">
-          {/* Backdrop */}
+          {/* Backdrop - Optimized for Safari */}
           <div
-            className={`absolute inset-0 bg-neutral-950/80 backdrop-blur-xl ${isClosing ? 'animate-backdrop-exit' : 'animate-backdrop-entry'}`}
-            style={{ WebkitBackdropFilter: 'blur(24px)' }}
+            className={`absolute inset-0 bg-neutral-950/80 backdrop-blur-heavy ${isClosing ? 'animate-backdrop-exit' : 'animate-backdrop-entry'}`}
             onClick={handleClose}
           ></div>
 
           {/* Modal Container */}
-          <div className={`relative w-full max-w-5xl h-[85vh] md:h-[90vh] bg-white dark:bg-[#080808] border border-neutral-200 dark:border-neutral-800 rounded-[2.5rem] overflow-hidden shadow-2xl flex flex-col ${isClosing ? 'animate-modal-exit' : 'animate-modal-entry'}`}>
+          <div className={`modal-container relative w-full max-w-5xl h-[85vh] md:h-[90vh] bg-white dark:bg-[#080808] border border-neutral-200 dark:border-neutral-800 rounded-[2.5rem] overflow-hidden shadow-2xl flex flex-col ${isClosing ? 'animate-modal-exit' : 'animate-modal-entry'}`}>
             <button
               onClick={handleClose}
               className="absolute top-8 right-8 z-50 p-3 bg-neutral-100 dark:bg-neutral-900 rounded-full hover:bg-neutral-200 dark:hover:bg-neutral-800 transition-colors group"

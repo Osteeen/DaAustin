@@ -7,6 +7,17 @@ interface ModalProps {
     children: ReactNode;
 }
 
+// Cache scrollbar width to avoid recalculation on every modal open
+let cachedScrollbarWidth: number | null = null;
+
+const getScrollbarWidth = (): number => {
+    if (cachedScrollbarWidth !== null) {
+        return cachedScrollbarWidth;
+    }
+    cachedScrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+    return cachedScrollbarWidth;
+};
+
 export const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children }) => {
     const [active, setActive] = useState(false);
     const [isClosing, setIsClosing] = useState(false);
@@ -15,7 +26,7 @@ export const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children }
         if (isOpen) {
             setActive(true);
             setIsClosing(false);
-            const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+            const scrollbarWidth = getScrollbarWidth();
             document.body.style.paddingRight = `${scrollbarWidth}px`;
             document.body.classList.add('modal-open');
         } else if (active) { // Only trigger close animation if it was active
@@ -32,22 +43,21 @@ export const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children }
             // This function manages the internal state for animation.
             document.body.style.paddingRight = '';
             document.body.classList.remove('modal-open');
-        }, 400);
+        }, 300); // Updated to match new animation duration
     };
 
     if (!active && !isOpen) return null;
 
     return (
         <div className={`fixed inset-0 z-[100] flex items-center justify-center px-4 sm:px-6`}>
-            {/* Backdrop */}
+            {/* Backdrop - Optimized for Safari */}
             <div
-                className={`absolute inset-0 bg-neutral-950/80 backdrop-blur-xl transition-opacity duration-300 ${isClosing ? 'animate-backdrop-exit' : 'animate-backdrop-entry'}`}
-                style={{ WebkitBackdropFilter: 'blur(24px)' }}
+                className={`absolute inset-0 bg-neutral-950/80 backdrop-blur-heavy transition-opacity duration-300 ${isClosing ? 'animate-backdrop-exit' : 'animate-backdrop-entry'}`}
                 onClick={onClose}
             />
 
             {/* Modal Content */}
-            <div className={`relative w-full max-w-4xl max-h-[90vh] bg-[#09090b] border border-neutral-800 rounded-3xl overflow-hidden shadow-2xl flex flex-col ${isClosing ? 'animate-modal-exit' : 'animate-modal-entry'}`}>
+            <div className={`modal-container relative w-full max-w-4xl max-h-[90vh] bg-[#09090b] border border-neutral-800 rounded-3xl overflow-hidden shadow-2xl flex flex-col ${isClosing ? 'animate-modal-exit' : 'animate-modal-entry'}`}>
 
                 {/* Header */}
                 <div className="flex items-center justify-between px-6 py-5 border-b border-neutral-800 bg-[#09090b] shrink-0 z-10">
@@ -70,3 +80,4 @@ export const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children }
         </div>
     );
 };
+
