@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Analytical Storyteller | Data Product Portfolio</title>
+    <title>Austin John | Data Analyst</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpeg" href="/Picture.JPG">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
     <style>
         /* 
            THE ULTIMATE JITTER FIX:
@@ -16,10 +20,9 @@
            2. We apply this to 'html' so the root viewport is stable.
         */
         html {
-            scrollbar-gutter: stable;
             height: 100%;
         }
-        
+
         /* 
            Lock the scroll on the body, NOT the html.
            This allows the html element to maintain its stable gutter 
@@ -40,50 +43,97 @@
         .mono {
             font-family: 'JetBrains Mono', monospace;
         }
-        
+
         @keyframes pulse-ring {
-            0% { transform: scale(.33); }
-            80%, 100% { opacity: 0; }
+            0% {
+                transform: scale(.33);
+            }
+
+            80%,
+            100% {
+                opacity: 0;
+            }
         }
+
         @keyframes pulse-dot {
-            0% { transform: scale(.8); }
-            50% { transform: scale(1); }
-            100% { transform: scale(.8); }
+            0% {
+                transform: scale(.8);
+            }
+
+            50% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(.8);
+            }
         }
+
         .pulse-ring {
             animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
         }
+
         .pulse-dot {
             animation: pulse-dot 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s infinite;
         }
 
         /* Modal Animations */
         @keyframes modal-scale-up {
-            from { opacity: 0; transform: scale(0.9) translateY(20px); }
-            to { opacity: 1; transform: scale(1) translateY(0); }
+            from {
+                opacity: 0;
+                transform: scale(0.9) translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
         }
+
         @keyframes modal-scale-down {
-            from { opacity: 1; transform: scale(1) translateY(0); }
-            to { opacity: 0; transform: scale(0.95) translateY(10px); }
+            from {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+
+            to {
+                opacity: 0;
+                transform: scale(0.95) translateY(10px);
+            }
         }
+
         @keyframes backdrop-fade-in {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
+
         @keyframes backdrop-fade-out {
-            from { opacity: 1; }
-            to { opacity: 0; }
+            from {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+            }
         }
 
         .animate-modal-entry {
             animation: modal-scale-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
+
         .animate-modal-exit {
             animation: modal-scale-down 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
+
         .animate-backdrop-entry {
             animation: backdrop-fade-in 0.5s ease forwards;
         }
+
         .animate-backdrop-exit {
             animation: backdrop-fade-out 0.4s ease forwards;
         }
@@ -91,22 +141,41 @@
         ::-webkit-scrollbar {
             width: 8px;
         }
+
         ::-webkit-scrollbar-track {
             background: #0D0D0D;
         }
+
         ::-webkit-scrollbar-thumb {
             background: #262626;
             border-radius: 4px;
         }
+
         ::-webkit-scrollbar-thumb:hover {
             background: #404040;
         }
-        
+
         .theme-transition {
             transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
+
+        @keyframes page-entry {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-page-entry {
+            animation: page-entry 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+        }
     </style>
-<script type="importmap">
+    <script type="importmap">
 {
   "imports": {
     "react": "https://esm.sh/react@^19.2.3",
@@ -115,10 +184,13 @@
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="/index.css">
 </head>
-<body class="selection:bg-cyan-500/30 selection:text-cyan-400 bg-white dark:bg-[#050505] text-neutral-900 dark:text-neutral-100">
+
+<body
+    class="selection:bg-cyan-500/30 selection:text-cyan-400 bg-white dark:bg-[#050505] text-neutral-900 dark:text-neutral-100">
     <div id="root"></div>
-<script type="module" src="/index.tsx"></script>
+    <script type="module" src="/index.tsx"></script>
 </body>
+
 </html>

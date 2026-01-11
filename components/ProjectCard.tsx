@@ -10,14 +10,17 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   const [isClosing, setIsClosing] = useState(false);
 
   // Toggle modal-open on the document body to lock scroll reliably.
-  // We use the body specifically because 'scrollbar-gutter: stable' is set on 'html'.
   useEffect(() => {
     if (active) {
+      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+      document.body.style.paddingRight = `${scrollbarWidth}px`;
       document.body.classList.add('modal-open');
     } else {
+      document.body.style.paddingRight = '';
       document.body.classList.remove('modal-open');
     }
     return () => {
+      document.body.style.paddingRight = '';
       document.body.classList.remove('modal-open');
     };
   }, [active]);
@@ -41,11 +44,13 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       <div className="group relative flex flex-col h-full bg-white dark:bg-neutral-900/40 hover:bg-neutral-50 dark:hover:bg-neutral-900/60 transition-all duration-300 border border-neutral-200 dark:border-neutral-800 hover:border-cyan-500/20 dark:hover:border-neutral-700 overflow-hidden rounded-[2rem] theme-transition">
         {/* Placeholder Header Section */}
         <div className="relative h-64 overflow-hidden bg-neutral-100 dark:bg-neutral-800 flex items-center justify-center p-8 transition-colors">
-          <div className="text-neutral-300 dark:text-neutral-700 font-black text-2xl md:text-3xl italic uppercase text-center leading-none opacity-40 select-none group-hover:opacity-70 transition-all duration-500 transform group-hover:scale-105">
-            {project.title}
-          </div>
-          <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-neutral-900 to-transparent opacity-60"></div>
-          <div className="absolute bottom-6 left-8 right-8">
+          {/* Background Image with Zoom Effect */}
+          <div
+            className="absolute inset-0 bg-cover bg-top opacity-30 group-hover:opacity-50 group-hover:scale-110 transition-all duration-700 ease-out"
+            style={{ backgroundImage: `url(${(import.meta as any).env.BASE_URL}tsibg.png)` }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-[#0a0a0a] via-white/80 dark:via-[#0a0a0a]/80 to-transparent"></div>
+          <div className="absolute bottom-6 left-8 right-8 z-20">
             <h4 className="text-sm font-black text-cyan-600 dark:text-cyan-400 uppercase tracking-[0.2em] mb-2">{project.subtitle}</h4>
             <h3 className="text-2xl md:text-3xl font-black text-neutral-900 dark:text-white uppercase italic leading-none tracking-tight">
               {project.title}
@@ -82,20 +87,20 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           </div>
 
           <div className="flex items-center justify-between pt-4 border-t border-neutral-100 dark:border-neutral-800">
-             <button 
+            <button
               onClick={handleOpen}
               className="text-xs font-black text-neutral-900 dark:text-white hover:text-cyan-500 transition-colors uppercase flex items-center gap-2 group/btn"
-             >
-               View Case Study 
-               <svg className="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-               </svg>
-             </button>
-             {project.link && (
-               <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-[10px] font-bold text-neutral-400 hover:text-cyan-500 uppercase transition-colors">
-                 Live Link
-               </a>
-             )}
+            >
+              View Case Study
+              <svg className="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </button>
+            {project.link && (
+              <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-[10px] font-bold text-neutral-400 hover:text-cyan-500 uppercase transition-colors">
+                Live Link
+              </a>
+            )}
           </div>
         </div>
       </div>
@@ -104,14 +109,14 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       {active && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-12 overflow-hidden">
           {/* Backdrop */}
-          <div 
-            className={`absolute inset-0 bg-neutral-950/80 backdrop-blur-xl ${isClosing ? 'animate-backdrop-exit' : 'animate-backdrop-entry'}`} 
+          <div
+            className={`absolute inset-0 bg-neutral-950/80 backdrop-blur-xl ${isClosing ? 'animate-backdrop-exit' : 'animate-backdrop-entry'}`}
             onClick={handleClose}
           ></div>
-          
+
           {/* Modal Container */}
-          <div className={`relative w-full max-w-5xl max-h-[90vh] bg-white dark:bg-[#080808] border border-neutral-200 dark:border-neutral-800 rounded-[2.5rem] overflow-hidden shadow-2xl theme-transition ${isClosing ? 'animate-modal-exit' : 'animate-modal-entry'}`}>
-            <button 
+          <div className={`relative w-full max-w-5xl h-[85vh] md:h-[90vh] bg-white dark:bg-[#080808] border border-neutral-200 dark:border-neutral-800 rounded-[2.5rem] overflow-hidden shadow-2xl flex flex-col ${isClosing ? 'animate-modal-exit' : 'animate-modal-entry'}`}>
+            <button
               onClick={handleClose}
               className="absolute top-8 right-8 z-50 p-3 bg-neutral-100 dark:bg-neutral-900 rounded-full hover:bg-neutral-200 dark:hover:bg-neutral-800 transition-colors group"
             >
@@ -120,13 +125,29 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
               </svg>
             </button>
 
-            <div className="overflow-y-auto h-full p-8 md:p-16 custom-scrollbar">
-               <div className="max-w-3xl mx-auto">
+            {/* Scrollable Content Buffer */}
+            <div className="flex-1 overflow-y-auto custom-scrollbar">
+              <div className="p-8 md:p-16">
+                <div className="max-w-3xl mx-auto">
                   <header className="mb-16">
                     <span className="text-cyan-500 font-black tracking-[0.3em] uppercase text-xs block mb-4">Deep Dive Analysis</span>
-                    <h2 className="text-4xl md:text-6xl font-black text-neutral-900 dark:text-white leading-none tracking-tight uppercase italic mb-8">
+                    <h2 className="text-4xl md:text-6xl font-black text-neutral-900 dark:text-white leading-none tracking-tight uppercase italic mb-6">
                       {project.title}
                     </h2>
+
+                    {project.link && (
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-sm font-bold text-cyan-500 hover:text-cyan-400 uppercase tracking-widest mb-8 border-b border-cyan-500/30 hover:border-cyan-500 transition-all pb-1 group"
+                      >
+                        Visit Live System
+                        <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                      </a>
+                    )}
                     <p className="text-xl text-neutral-500 dark:text-neutral-400 font-medium italic leading-relaxed">
                       {project.tldr}
                     </p>
@@ -176,7 +197,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                   </div>
 
                   <div className="mt-20 pt-10 border-t border-neutral-100 dark:border-neutral-800 flex justify-end items-center">
-                    <button 
+                    <button
                       onClick={handleClose}
                       className="text-xs font-black text-neutral-500 uppercase tracking-widest hover:text-neutral-900 dark:hover:text-white transition-colors flex items-center gap-2 group/close"
                     >
@@ -186,7 +207,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                       </svg>
                     </button>
                   </div>
-               </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

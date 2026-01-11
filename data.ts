@@ -25,7 +25,7 @@ export const PROJECTS: Project[] = [
     ],
     tools: ['Voice AI', 'Make.com', 'n8n', 'Airtable', 'Operational BI'],
     image: 'https://picsum.photos/seed/hotelai/800/400',
-    link: 'https://osteeen.github.io/True-Stay-Insight/',
+    link: 'https://truestayinsight.com/',
     deepDive: {
       situation: 'The hotel had no reliable way to collect consistent post stay feedback. Front desk follow ups were manual, email surveys had low response rates, and management had no unified view of guest satisfaction or service issues.',
       task: 'Design and implement an automated system that can reliably collect guest feedback, detect serious issues, and present actionable insights to management without increasing staff workload.',
