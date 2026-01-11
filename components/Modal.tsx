@@ -42,6 +42,7 @@ export const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children }
             {/* Backdrop */}
             <div
                 className={`absolute inset-0 bg-neutral-950/80 backdrop-blur-xl transition-opacity duration-300 ${isClosing ? 'animate-backdrop-exit' : 'animate-backdrop-entry'}`}
+                style={{ WebkitBackdropFilter: 'blur(24px)' }}
                 onClick={onClose}
             />
 

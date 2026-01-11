@@ -31,8 +31,18 @@ const App: React.FC = () => {
           {/* Avatar Area / Identity */}
           <div className="relative group shrink-0" onClick={() => setActiveModal('contact')}>
             <div className="absolute inset-0 bg-cyan-500 rounded-3xl blur-2xl opacity-10 group-hover:opacity-20 transition-opacity cursor-pointer"></div>
-            <div className="w-32 h-32 md:w-40 md:h-40 rounded-3xl border-2 border-neutral-200 dark:border-neutral-800 bg-neutral-100 dark:bg-neutral-900 overflow-hidden relative flex items-center justify-center transition-all duration-500 shadow-2xl theme-transition cursor-pointer">
-              <img src={`${(import.meta as any).env.BASE_URL}Picture.JPG`} alt="Austin John" className="w-full h-full object-cover" />
+            <div
+              className="w-32 h-32 md:w-40 md:h-40 rounded-3xl border-2 border-neutral-200 dark:border-neutral-800 bg-neutral-900 overflow-hidden relative flex items-center justify-center transition-all duration-500 shadow-2xl theme-transition cursor-pointer"
+              style={{ transform: 'translateZ(0)' }}
+            >
+              <img
+                src={`${(import.meta as any).env.BASE_URL}Picture.JPG`}
+                alt="Austin John"
+                className="w-full h-full object-cover"
+                loading="eager"
+                decoding="async"
+                fetchPriority="high"
+              />
             </div>
           </div>
 
@@ -45,8 +55,8 @@ const App: React.FC = () => {
               Data <br />
               Analyst<span className="text-cyan-500">.</span>
             </h1>
-            <p className="mt-10 text-neutral-500 dark:text-neutral-400 max-w-xl text-lg md:text-xl font-medium leading-relaxed mx-auto md:mx-0">
-              I build <span className="text-neutral-900 dark:text-white">analytics and AI-powered systems</span> that turn business data into <span className="text-cyan-600 dark:text-cyan-400 font-bold">decisions.</span>
+            <p className="mt-10 text-neutral-500 dark:text-neutral-400 max-w-2xl text-lg md:text-xl font-medium leading-relaxed mx-auto md:mx-0">
+              I analyze <span className="text-neutral-900 dark:text-white">business data</span> to uncover insights, solve operational problems, and drive <span className="text-cyan-600 dark:text-cyan-400 font-bold">better decisions</span> using analytics and AI.
             </p>
           </div>
         </div>
@@ -65,7 +75,10 @@ const App: React.FC = () => {
 
         {/* Left Column */}
         <div className="lg:col-span-4 flex flex-col gap-6">
-          <section className="bg-neutral-50 dark:bg-neutral-900/10 border border-neutral-200 dark:border-neutral-800/50 rounded-3xl overflow-hidden backdrop-blur-sm theme-transition shadow-sm">
+          <section
+            className="bg-neutral-50 dark:bg-neutral-900/10 border border-neutral-200 dark:border-neutral-800/50 rounded-3xl overflow-hidden backdrop-blur-sm theme-transition shadow-sm"
+            style={{ WebkitBackdropFilter: 'blur(4px)' }}
+          >
             <LiveJourney data={JOURNEY_DATA} />
           </section>
 

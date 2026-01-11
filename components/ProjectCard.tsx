@@ -111,6 +111,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           {/* Backdrop */}
           <div
             className={`absolute inset-0 bg-neutral-950/80 backdrop-blur-xl ${isClosing ? 'animate-backdrop-exit' : 'animate-backdrop-entry'}`}
+            style={{ WebkitBackdropFilter: 'blur(24px)' }}
             onClick={handleClose}
           ></div>
 
