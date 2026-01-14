@@ -7,10 +7,11 @@ import { ThinkCard } from './components/ThinkCard';
 import { Modal } from './components/Modal';
 import { ResumeContent } from './components/ResumeContent';
 import { ContactContent } from './components/ContactContent';
+import { AboutContent } from './components/AboutContent';
 import { JOURNEY_DATA, PROJECTS, TOOLS } from './data';
 
 const App: React.FC = () => {
-  const [activeModal, setActiveModal] = useState<'none' | 'resume' | 'contact'>('none');
+  const [activeModal, setActiveModal] = useState<'none' | 'resume' | 'contact' | 'about'>('none');
 
   useEffect(() => {
     // Enforce dark mode
@@ -35,9 +36,10 @@ const App: React.FC = () => {
               className="w-32 h-32 md:w-40 md:h-40 rounded-3xl border-2 border-neutral-200 dark:border-neutral-800 bg-neutral-900 overflow-hidden relative flex items-center justify-center transition-all duration-500 shadow-2xl theme-transition cursor-pointer"
             >
               <img
-                src={`${(import.meta as any).env.BASE_URL}Picture-optimized.jpg`}
+                src={`${(import.meta as any).env.BASE_URL}Picture2.jpg`}
                 alt="Austin John"
                 className="w-full h-full object-cover"
+                style={{ objectPosition: '35% 50%' }}
                 loading="eager"
                 decoding="async"
                 fetchPriority="high"
@@ -62,9 +64,10 @@ const App: React.FC = () => {
 
         <div className="flex flex-col lg:items-end gap-3 w-full lg:w-auto text-center lg:text-right">
           <div className="flex gap-8 mt-6 justify-center lg:justify-end items-center">
-            <button onClick={() => setActiveModal('resume')} className="text-xs font-black text-cyan-600 dark:text-cyan-500 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors uppercase tracking-widest h-8 flex items-center border-b-2 border-cyan-500/30 hover:border-cyan-500">Resume</button>
-            <a href="https://www.linkedin.com/in/austin-john-ogbormeh-422330147/" target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-neutral-400 dark:text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors uppercase tracking-widest h-8 flex items-center border-b-2 border-transparent">LinkedIn</a>
-            <button onClick={() => setActiveModal('contact')} className="text-xs font-bold text-neutral-400 dark:text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors uppercase tracking-widest h-8 flex items-center border-b-2 border-transparent">Contact</button>
+            <button onClick={() => setActiveModal('resume')} className="text-xs font-black text-cyan-600 dark:text-cyan-500 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors uppercase tracking-widest h-8 flex items-center border-b-2 border-cyan-500/30 hover:border-cyan-500 whitespace-nowrap">Resume</button>
+            <button onClick={() => setActiveModal('about')} className="text-xs font-bold text-neutral-400 dark:text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors uppercase tracking-widest h-8 flex items-center border-b-2 border-transparent whitespace-nowrap">About me</button>
+            <a href="https://www.linkedin.com/in/austin-john-ogbormeh-422330147/" target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-neutral-400 dark:text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors uppercase tracking-widest h-8 flex items-center border-b-2 border-transparent whitespace-nowrap">LinkedIn</a>
+            <button onClick={() => setActiveModal('contact')} className="text-xs font-bold text-neutral-400 dark:text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors uppercase tracking-widest h-8 flex items-center border-b-2 border-transparent whitespace-nowrap">Contact</button>
           </div>
         </div>
       </header>
@@ -120,9 +123,14 @@ const App: React.FC = () => {
       <Modal
         isOpen={activeModal !== 'none'}
         onClose={() => setActiveModal('none')}
-        title={activeModal === 'resume' ? 'Resume & Experience' : 'Contact Me'}
+        title={
+          activeModal === 'resume' ? 'Resume & Experience' :
+            activeModal === 'about' ? 'About Me (Not About Data 😄)' :
+              'Contact Me'
+        }
       >
         {activeModal === 'resume' && <ResumeContent />}
+        {activeModal === 'about' && <AboutContent />}
         {activeModal === 'contact' && <ContactContent />}
       </Modal>
 
@@ -148,7 +156,7 @@ const App: React.FC = () => {
             </svg>
           </a>
           <a
-            href="https://www.instagram.com/ost_een?igsh=MWN3MWgxZXZ2cjkydQ%3D%3D&utm_source=qr"
+            href="https://www.instagram.com/datawithaustin?igsh=OHJsNWJqcTA4cGV6&utm_source=qr"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-cyan-500 hover:scale-110 transition-all duration-300"
