@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { StatusBadge } from './components/PulsingIndicator';
 import { LiveJourney } from './components/LiveJourney';
 import { ProjectCard } from './components/ProjectCard';
@@ -12,11 +12,6 @@ import { JOURNEY_DATA, PROJECTS, TOOLS } from './data';
 
 const App: React.FC = () => {
   const [activeModal, setActiveModal] = useState<'none' | 'resume' | 'contact' | 'about'>('none');
-
-  useEffect(() => {
-    // Enforce dark mode
-    document.documentElement.classList.add('dark');
-  }, []);
 
   return (
     <div className="min-h-screen pb-20 px-4 md:px-12 max-w-7xl mx-auto theme-transition relative">
