@@ -33,10 +33,10 @@ const App: React.FC = () => {
           <div className="relative group shrink-0" onClick={() => setActiveModal('contact')}>
             <div className="absolute inset-0 bg-cyan-500 rounded-3xl blur-2xl opacity-10 group-hover:opacity-20 transition-opacity cursor-pointer"></div>
             <div
-              className="w-32 h-32 md:w-40 md:h-40 rounded-3xl border-2 border-neutral-200 dark:border-neutral-800 bg-neutral-900 overflow-hidden relative flex items-center justify-center transition-all duration-500 shadow-2xl theme-transition cursor-pointer"
+              className="w-32 h-32 md:w-40 md:h-40 rounded-3xl border-2 border-neutral-800 bg-neutral-900 overflow-hidden relative flex items-center justify-center transition-all duration-500 shadow-2xl theme-transition cursor-pointer"
             >
               <img
-                src={`${(import.meta as any).env.BASE_URL}Picture2.jpg`}
+                src={`${(import.meta as any).env.BASE_URL}Picture2-optimized.jpg`}
                 alt="Austin John"
                 className="w-full h-full object-cover"
                 style={{ objectPosition: '35% 50%' }}
@@ -49,25 +49,25 @@ const App: React.FC = () => {
 
           <div className="text-center md:text-left pt-2">
             <div className="flex flex-col md:flex-row items-center gap-4 mb-3 md:mb-5">
-              <h2 className="text-3xl font-black text-neutral-900 dark:text-white tracking-tighter uppercase italic leading-none">Austin John</h2>
+              <h2 className="text-3xl font-black text-white tracking-tighter uppercase italic leading-none">Austin John</h2>
               <StatusBadge />
             </div>
-            <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tighter text-neutral-900 dark:text-white leading-[0.85] uppercase italic transition-colors">
+            <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tighter text-white leading-[0.85] uppercase italic transition-colors">
               Data <br />
               Analyst<span className="text-cyan-500">.</span>
             </h1>
-            <p className="mt-10 text-neutral-500 dark:text-neutral-400 max-w-2xl text-lg md:text-xl font-medium leading-relaxed mx-auto md:mx-0">
-              I analyze <span className="text-neutral-900 dark:text-white">business data</span> to uncover insights, solve operational problems, and drive <span className="text-cyan-600 dark:text-cyan-400 font-bold">better decisions</span> using analytics and AI.
+            <p className="mt-10 text-neutral-400 max-w-2xl text-lg md:text-xl font-medium leading-relaxed mx-auto md:mx-0">
+              I analyze <span className="text-white">business data</span> to uncover insights, solve operational problems, and drive <span className="text-cyan-400 font-bold">better decisions</span> using analytics and AI.
             </p>
           </div>
         </div>
 
         <div className="flex flex-col lg:items-end gap-3 w-full lg:w-auto text-center lg:text-right">
           <div className="flex gap-8 mt-6 justify-center lg:justify-end items-center">
-            <button onClick={() => setActiveModal('resume')} className="text-xs font-black text-cyan-600 dark:text-cyan-500 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors uppercase tracking-widest h-8 flex items-center border-b-2 border-cyan-500/30 hover:border-cyan-500 whitespace-nowrap">Resume</button>
-            <button onClick={() => setActiveModal('about')} className="text-xs font-bold text-neutral-400 dark:text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors uppercase tracking-widest h-8 flex items-center border-b-2 border-transparent whitespace-nowrap">About me</button>
-            <a href="https://www.linkedin.com/in/austin-john-ogbormeh-422330147/" target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-neutral-400 dark:text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors uppercase tracking-widest h-8 flex items-center border-b-2 border-transparent whitespace-nowrap">LinkedIn</a>
-            <button onClick={() => setActiveModal('contact')} className="text-xs font-bold text-neutral-400 dark:text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors uppercase tracking-widest h-8 flex items-center border-b-2 border-transparent whitespace-nowrap">Contact</button>
+            <button onClick={() => setActiveModal('resume')} className="text-xs font-black text-cyan-500 hover:text-cyan-400 transition-colors uppercase tracking-widest h-8 flex items-center border-b-2 border-cyan-500/30 hover:border-cyan-500 whitespace-nowrap">Resume</button>
+            <button onClick={() => setActiveModal('about')} className="text-xs font-bold text-neutral-500 hover:text-white transition-colors uppercase tracking-widest h-8 flex items-center border-b-2 border-transparent whitespace-nowrap">About me</button>
+            <a href="https://www.linkedin.com/in/austin-john-ogbormeh-422330147/" target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-neutral-500 hover:text-white transition-colors uppercase tracking-widest h-8 flex items-center border-b-2 border-transparent whitespace-nowrap">LinkedIn</a>
+            <button onClick={() => setActiveModal('contact')} className="text-xs font-bold text-neutral-500 hover:text-white transition-colors uppercase tracking-widest h-8 flex items-center border-b-2 border-transparent whitespace-nowrap">Contact</button>
           </div>
         </div>
       </header>
@@ -78,13 +78,13 @@ const App: React.FC = () => {
         {/* Left Column */}
         <div className="lg:col-span-4 flex flex-col gap-6">
           <section
-            className="bg-neutral-50 dark:bg-neutral-900/10 border border-neutral-200 dark:border-neutral-800/50 rounded-3xl overflow-hidden backdrop-blur-sm theme-transition shadow-sm"
+            className="bg-neutral-900/10 border border-neutral-800/50 rounded-3xl overflow-hidden backdrop-blur-sm theme-transition shadow-sm"
             style={{ WebkitBackdropFilter: 'blur(4px)' }}
           >
             <LiveJourney data={JOURNEY_DATA} />
           </section>
 
-          <section className="bg-neutral-50 dark:bg-neutral-900/30 border border-neutral-200 dark:border-neutral-800 rounded-3xl overflow-hidden shadow-xl transition-all hover:border-cyan-500/20 theme-transition">
+          <section className="bg-neutral-900/30 border border-neutral-800 rounded-3xl overflow-hidden shadow-xl transition-all hover:border-cyan-500/20 theme-transition">
             <ToolStack tools={TOOLS} />
           </section>
 
@@ -96,23 +96,23 @@ const App: React.FC = () => {
         {/* Right Column */}
         <div className="lg:col-span-8 flex flex-col gap-6">
           <div className="flex items-center gap-4 px-4">
-            <div className="h-[1px] w-8 bg-neutral-200 dark:bg-neutral-800 transition-colors"></div>
-            <h3 className="text-[10px] font-black text-neutral-400 dark:text-neutral-500 uppercase tracking-[0.4em] italic">Selected Projects</h3>
-            <div className="h-[1px] flex-1 bg-neutral-200 dark:border-neutral-800/50 transition-colors"></div>
+            <div className="h-[1px] w-8 bg-neutral-800 transition-colors"></div>
+            <h3 className="text-[10px] font-black text-neutral-500 uppercase tracking-[0.4em] italic">Selected Projects</h3>
+            <div className="h-[1px] flex-1 bg-neutral-800/50 transition-colors"></div>
           </div>
           <section className="rounded-3xl overflow-hidden shadow-2xl shadow-cyan-500/5 h-fit">
             <ProjectCard project={PROJECTS[0]} />
           </section>
 
           {/* CTA Card */}
-          <section className="min-h-48 bg-gradient-to-br from-neutral-100 via-white to-neutral-200 dark:from-neutral-900 dark:via-neutral-900 dark:to-cyan-950/20 border border-neutral-200 dark:border-neutral-800 rounded-[2.5rem] flex flex-col md:flex-row items-center justify-between px-10 md:px-16 py-12 gap-12 text-center md:text-left h-fit mt-auto shadow-2xl shadow-cyan-500/5 theme-transition">
+          <section className="min-h-48 bg-gradient-to-br from-neutral-900 via-neutral-900 to-cyan-950/20 border border-neutral-800 rounded-[2.5rem] flex flex-col md:flex-row items-center justify-between px-10 md:px-16 py-12 gap-12 text-center md:text-left h-fit mt-auto shadow-2xl shadow-cyan-500/5 theme-transition">
             <div className="max-w-xl">
-              <h4 className="text-4xl font-black text-neutral-900 dark:text-white tracking-tight uppercase italic leading-tight">Engineering <br />Decision Clarity</h4>
+              <h4 className="text-4xl font-black text-white tracking-tight uppercase italic leading-tight">Engineering <br />Decision Clarity</h4>
               <p className="text-lg text-neutral-500 mt-4 italic font-medium">Ready to bridge the gap between historical reports and operational decision systems?</p>
             </div>
             <button
               onClick={() => setActiveModal('contact')}
-              className="bg-neutral-900 dark:bg-white text-white dark:text-black px-16 py-6 rounded-2xl text-lg font-black hover:bg-cyan-500 dark:hover:bg-cyan-400 hover:text-white dark:hover:text-black transition-all shadow-[0_0_40px_rgba(34,211,238,0.2)] active:scale-95 uppercase tracking-tighter"
+              className="bg-white text-black px-16 py-6 rounded-2xl text-lg font-black hover:bg-cyan-400 hover:text-black transition-all shadow-[0_0_40px_rgba(34,211,238,0.2)] active:scale-95 uppercase tracking-tighter"
             >
               HIRE ME
             </button>
@@ -135,7 +135,7 @@ const App: React.FC = () => {
       </Modal>
 
       {/* Footer */}
-      <footer className="mt-32 py-16 border-t border-neutral-200 dark:border-neutral-800 flex flex-col md:grid md:grid-cols-3 items-center text-[10px] font-mono text-neutral-400 dark:text-neutral-600 uppercase tracking-[0.4em] gap-8 text-center theme-transition">
+      <footer className="mt-32 py-16 border-t border-neutral-800 flex flex-col md:grid md:grid-cols-3 items-center text-[10px] font-mono text-neutral-600 uppercase tracking-[0.4em] gap-8 text-center theme-transition">
         <div className="flex items-center justify-center md:justify-start gap-3 w-full">
           <div className="w-2 h-2 rounded-full bg-cyan-500 animate-pulse shadow-[0_0_10px_rgba(34,211,238,0.8)]"></div>
           System Status: Live
@@ -170,14 +170,13 @@ const App: React.FC = () => {
         </div>
 
         <div className="flex md:justify-end items-center justify-center w-full">
-          <span className="text-neutral-400 dark:text-neutral-500 font-black">© 2026 • BUILT FOR IMPACT</span>
+          <span className="text-neutral-500 font-black">© 2026 • BUILT FOR IMPACT</span>
         </div>
       </footer>
 
-      {/* Background Decor */}
       <div className="fixed top-0 left-0 w-full h-full -z-10 pointer-events-none transition-opacity duration-1000">
-        <div className="absolute top-[-20%] left-[-10%] w-[70%] h-[70%] bg-cyan-100/30 dark:bg-cyan-900/10 blur-[180px] rounded-full"></div>
-        <div className="absolute bottom-[-20%] right-[-10%] w-[70%] h-[70%] bg-indigo-50/20 dark:bg-indigo-900/5 blur-[180px] rounded-full"></div>
+        <div className="absolute top-[-20%] left-[-10%] w-[70%] h-[70%] bg-cyan-900/10 blur-[180px] rounded-full"></div>
+        <div className="absolute bottom-[-20%] right-[-10%] w-[70%] h-[70%] bg-indigo-900/5 blur-[180px] rounded-full"></div>
       </div>
     </div>
   );

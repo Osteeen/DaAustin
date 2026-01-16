@@ -52,18 +52,18 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 
   return (
     <>
-      <div className="group relative flex flex-col h-full bg-white dark:bg-neutral-900/40 hover:bg-neutral-50 dark:hover:bg-neutral-900/60 transition-all duration-300 border border-neutral-200 dark:border-neutral-800 hover:border-cyan-500/20 dark:hover:border-neutral-700 overflow-hidden rounded-[2rem] theme-transition">
+      <div className="group relative flex flex-col h-full bg-neutral-900/40 hover:bg-neutral-900/60 transition-all duration-300 border border-neutral-800 hover:border-neutral-700 overflow-hidden rounded-[2rem] theme-transition">
         {/* Placeholder Header Section */}
-        <div className="relative h-64 overflow-hidden bg-neutral-100 dark:bg-neutral-800 flex items-center justify-center p-8 transition-colors">
+        <div className="relative h-64 overflow-hidden bg-neutral-800 flex items-center justify-center p-8 transition-colors">
           {/* Background Image with Zoom Effect - Optimized for Safari */}
           <div
             className="absolute inset-0 bg-cover bg-top opacity-30 group-hover:opacity-50 hover-scale-safari transition-all duration-700 ease-out will-change-transform"
             style={{ backgroundImage: `url(${(import.meta as any).env.BASE_URL}tsibg-optimized.png)` }}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-[#0a0a0a] via-white/80 dark:via-[#0a0a0a]/80 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/80 to-transparent"></div>
           <div className="absolute bottom-6 left-8 right-8 z-20">
-            <h4 className="text-sm font-black text-cyan-600 dark:text-cyan-400 uppercase tracking-[0.2em] mb-2">{project.subtitle}</h4>
-            <h3 className="text-2xl md:text-3xl font-black text-neutral-900 dark:text-white uppercase italic leading-none tracking-tight">
+            <h4 className="text-sm font-black text-cyan-400 uppercase tracking-[0.2em] mb-2">{project.subtitle}</h4>
+            <h3 className="text-2xl md:text-3xl font-black text-white uppercase italic leading-none tracking-tight">
               {project.title}
             </h3>
           </div>
@@ -74,14 +74,14 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
               <p className="text-[10px] font-black text-neutral-400 uppercase tracking-widest mb-3">Problem</p>
-              <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed italic">{project.problem}</p>
+              <p className="text-sm text-neutral-400 leading-relaxed italic">{project.problem}</p>
             </div>
             <div>
               <p className="text-[10px] font-black text-neutral-400 uppercase tracking-widest mb-3">Impact Metrics</p>
               <div className="grid grid-cols-2 gap-4">
                 {project.impact.slice(0, 2).map((item, idx) => (
-                  <div key={idx} className="bg-neutral-100 dark:bg-neutral-800/50 p-3 rounded-xl border border-neutral-200 dark:border-neutral-700/50">
-                    <span className="block text-xl font-black text-cyan-600 dark:text-cyan-500">{item.value}</span>
+                  <div key={idx} className="bg-neutral-800/50 p-3 rounded-xl border border-neutral-700/50">
+                    <span className="block text-xl font-black text-cyan-500">{item.value}</span>
                     <span className="text-[9px] font-bold text-neutral-500 uppercase">{item.metric}</span>
                   </div>
                 ))}
@@ -91,16 +91,16 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 
           <div className="flex flex-wrap gap-2">
             {project.tools.map(tool => (
-              <span key={tool} className="px-3 py-1 bg-neutral-100 dark:bg-neutral-800 text-[10px] font-bold text-neutral-500 dark:text-neutral-400 rounded-full border border-neutral-200 dark:border-neutral-700 transition-colors uppercase tracking-wider">
+              <span key={tool} className="px-3 py-1 bg-neutral-800 text-[10px] font-bold text-neutral-400 rounded-full border border-neutral-700 transition-colors uppercase tracking-wider">
                 {tool}
               </span>
             ))}
           </div>
 
-          <div className="flex items-center justify-between pt-4 border-t border-neutral-100 dark:border-neutral-800">
+          <div className="flex items-center justify-between pt-4 border-t border-neutral-800">
             <button
               onClick={handleOpen}
-              className="text-xs font-black text-neutral-900 dark:text-white hover:text-cyan-500 transition-colors uppercase flex items-center gap-2 group/btn"
+              className="text-xs font-black text-white hover:text-cyan-500 transition-colors uppercase flex items-center gap-2 group/btn"
             >
               View Case Study
               <svg className="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -126,10 +126,10 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           ></div>
 
           {/* Modal Container */}
-          <div className={`modal-container relative w-full max-w-5xl h-[85vh] md:h-[90vh] bg-white dark:bg-[#080808] border border-neutral-200 dark:border-neutral-800 rounded-[2.5rem] overflow-hidden shadow-2xl flex flex-col ${isClosing ? 'animate-modal-exit' : 'animate-modal-entry'}`}>
+          <div className={`modal-container relative w-full max-w-5xl h-[85vh] md:h-[90vh] bg-[#080808] border border-neutral-800 rounded-[2.5rem] overflow-hidden shadow-2xl flex flex-col ${isClosing ? 'animate-modal-exit' : 'animate-modal-entry'}`}>
             <button
               onClick={handleClose}
-              className="absolute top-8 right-8 z-50 p-3 bg-neutral-100 dark:bg-neutral-900 rounded-full hover:bg-neutral-200 dark:hover:bg-neutral-800 transition-colors group"
+              className="absolute top-8 right-8 z-50 p-3 bg-neutral-900 rounded-full hover:bg-neutral-800 transition-colors group"
             >
               <svg className="w-5 h-5 text-neutral-500 group-hover:rotate-90 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -142,7 +142,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                 <div className="max-w-3xl mx-auto">
                   <header className="mb-16">
                     <span className="text-cyan-500 font-black tracking-[0.3em] uppercase text-xs block mb-4">Deep Dive Analysis</span>
-                    <h2 className="text-4xl md:text-6xl font-black text-neutral-900 dark:text-white leading-none tracking-tight uppercase italic mb-6">
+                    <h2 className="text-4xl md:text-6xl font-black text-white leading-none tracking-tight uppercase italic mb-6">
                       {project.title}
                     </h2>
 
@@ -159,47 +159,47 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                         </svg>
                       </a>
                     )}
-                    <p className="text-xl text-neutral-500 dark:text-neutral-400 font-medium italic leading-relaxed">
+                    <p className="text-xl text-neutral-400 font-medium italic leading-relaxed">
                       {project.tldr}
                     </p>
                   </header>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
                     <section>
-                      <h4 className="text-[10px] font-black text-neutral-400 dark:text-neutral-500 uppercase tracking-[0.4em] mb-4">The Situation</h4>
-                      <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed font-medium">
+                      <h4 className="text-[10px] font-black text-neutral-500 uppercase tracking-[0.4em] mb-4">The Situation</h4>
+                      <p className="text-sm text-neutral-300 leading-relaxed font-medium">
                         {project.deepDive.situation}
                       </p>
                     </section>
                     <section>
-                      <h4 className="text-[10px] font-black text-neutral-400 dark:text-neutral-500 uppercase tracking-[0.4em] mb-4">The Task</h4>
-                      <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed font-medium">
+                      <h4 className="text-[10px] font-black text-neutral-500 uppercase tracking-[0.4em] mb-4">The Task</h4>
+                      <p className="text-sm text-neutral-300 leading-relaxed font-medium">
                         {project.deepDive.task}
                       </p>
                     </section>
                   </div>
 
                   <div className="space-y-16">
-                    <section className="bg-neutral-50 dark:bg-neutral-900/50 p-8 md:p-12 rounded-[2rem] border border-neutral-200 dark:border-neutral-800">
-                      <h4 className="text-[10px] font-black text-cyan-600 dark:text-cyan-400 uppercase tracking-[0.4em] mb-6">Execution & Architecture</h4>
-                      <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-loose whitespace-pre-line font-medium mb-8">
+                    <section className="bg-neutral-900/50 p-8 md:p-12 rounded-[2rem] border border-neutral-800">
+                      <h4 className="text-[10px] font-black text-cyan-400 uppercase tracking-[0.4em] mb-6">Execution & Architecture</h4>
+                      <p className="text-sm text-neutral-300 leading-loose whitespace-pre-line font-medium mb-8">
                         {project.deepDive.action}
                       </p>
-                      <div className="bg-neutral-100 dark:bg-neutral-950 p-6 rounded-2xl border border-neutral-200 dark:border-neutral-800">
+                      <div className="bg-neutral-950 p-6 rounded-2xl border border-neutral-800">
                         <span className="text-[9px] font-black text-neutral-400 uppercase tracking-widest block mb-4">Pipeline Logic</span>
-                        <p className="text-[12px] mono text-neutral-500 dark:text-neutral-400 whitespace-pre-line leading-relaxed">
+                        <p className="text-[12px] mono text-neutral-400 whitespace-pre-line leading-relaxed">
                           {project.deepDive.logic}
                         </p>
                       </div>
                     </section>
 
                     <section>
-                      <h4 className="text-[10px] font-black text-neutral-400 dark:text-neutral-500 uppercase tracking-[0.4em] mb-8">Final Results & ROI</h4>
+                      <h4 className="text-[10px] font-black text-neutral-500 uppercase tracking-[0.4em] mb-8">Final Results & ROI</h4>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         {project.impact.map((item, idx) => (
-                          <div key={idx} className="p-6 border border-neutral-200 dark:border-neutral-800 rounded-3xl hover:border-cyan-500/30 transition-colors">
-                            <span className="block text-3xl font-black text-neutral-900 dark:text-white mb-1">{item.value}</span>
-                            <span className="block text-[10px] font-black text-cyan-600 dark:text-cyan-500 uppercase tracking-widest mb-3">{item.metric}</span>
+                          <div key={idx} className="p-6 border border-neutral-800 rounded-3xl hover:border-cyan-500/30 transition-colors">
+                            <span className="block text-3xl font-black text-white mb-1">{item.value}</span>
+                            <span className="block text-[10px] font-black text-cyan-500 uppercase tracking-widest mb-3">{item.metric}</span>
                             <p className="text-xs text-neutral-500 leading-relaxed">{item.description}</p>
                           </div>
                         ))}
@@ -207,10 +207,10 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                     </section>
                   </div>
 
-                  <div className="mt-20 pt-10 border-t border-neutral-100 dark:border-neutral-800 flex justify-end items-center">
+                  <div className="mt-20 pt-10 border-t border-neutral-800 flex justify-end items-center">
                     <button
                       onClick={handleClose}
-                      className="text-xs font-black text-neutral-500 uppercase tracking-widest hover:text-neutral-900 dark:hover:text-white transition-colors flex items-center gap-2 group/close"
+                      className="text-xs font-black text-neutral-500 uppercase tracking-widest hover:text-white transition-colors flex items-center gap-2 group/close"
                     >
                       Close Report
                       <svg className="w-4 h-4 transform group-hover/close:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">

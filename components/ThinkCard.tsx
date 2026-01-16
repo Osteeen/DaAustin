@@ -10,14 +10,14 @@ export const ThinkCard: React.FC = () => {
   ];
 
   return (
-    <div className="p-8 bg-white dark:bg-neutral-900/40 border border-neutral-200 dark:border-neutral-800 rounded-[2rem] h-full flex flex-col group hover:border-cyan-500/30 transition-all shadow-sm theme-transition">
-      <h3 className="text-sm font-bold uppercase tracking-tighter text-neutral-400 dark:text-neutral-500 mb-8 italic">How I Think</h3>
+    <div className="p-8 bg-neutral-900/40 border border-neutral-800 rounded-[2rem] h-full flex flex-col group hover:border-cyan-500/30 transition-all shadow-none theme-transition">
+      <h3 className="text-sm font-bold uppercase tracking-tighter text-neutral-500 mb-8 italic">How I Think</h3>
       <div className="space-y-6 flex-1">
         {steps.map((s, i) => (
           <div key={i} className="flex items-start gap-4">
-            <span className="text-cyan-600 dark:text-cyan-500 font-mono text-xs pt-1 font-bold">0{i+1}</span>
+            <span className="text-cyan-500 font-mono text-xs pt-1 font-bold">0{i + 1}</span>
             <div>
-              <p className="text-sm font-black text-neutral-900 dark:text-neutral-100 uppercase tracking-tight leading-tight transition-colors">
+              <p className="text-sm font-black text-neutral-100 uppercase tracking-tight leading-tight transition-colors">
                 {s.title}
               </p>
               <p className="text-xs text-neutral-500 mt-1 leading-relaxed">{s.desc}</p>
@@ -25,8 +25,8 @@ export const ThinkCard: React.FC = () => {
           </div>
         ))}
       </div>
-      <div className="mt-10 pt-4 border-t border-neutral-100 dark:border-neutral-800/50">
-        <p className="text-[10px] mono text-neutral-400 dark:text-neutral-600 uppercase">Framework: Decision-First Engineering</p>
+      <div className="mt-10 pt-4 border-t border-neutral-800/50">
+        <p className="text-[10px] mono text-neutral-600 uppercase">Framework: Decision-First Engineering</p>
       </div>
     </div>
   );

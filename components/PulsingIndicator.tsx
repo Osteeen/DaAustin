@@ -14,9 +14,9 @@ export const PulsingIndicator: React.FC<{ size?: 'sm' | 'md' }> = ({ size = 'md'
 
 export const StatusBadge: React.FC = () => {
   return (
-    <div className="flex items-center gap-3 px-4 py-2 bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-full w-fit theme-transition shadow-sm dark:shadow-none self-center">
+    <div className="flex items-center gap-3 px-4 py-2 bg-neutral-900 border border-neutral-800 rounded-full w-fit theme-transition shadow-none self-center">
       <PulsingIndicator size="sm" />
-      <span className="text-[14px] font-black uppercase tracking-[0.05em] text-neutral-800 dark:text-neutral-100 leading-none">Open to Work</span>
+      <span className="text-[14px] font-black uppercase tracking-[0.05em] text-neutral-100 leading-none">Open to Work</span>
     </div>
   );
 };
