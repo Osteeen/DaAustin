@@ -8,14 +8,14 @@ export const ResumeContent: React.FC = () => {
                 <div>
                     <h3 className="text-2xl font-bold text-white uppercase italic">OGBORMEH AUSTIN JOHN IFEANYI</h3>
                     <p className="text-cyan-500 font-mono text-sm tracking-wider">Abuja, Nigeria</p>
-                    <p className="text-sm font-mono mt-1">austinjohn337@gmail.com • +2347057585612 / +13322224932</p>
+                    <p className="text-sm font-mono mt-1">austinjohn337@gmail.com • +2347057585612</p>
                     <p className="text-xs font-mono mt-2 text-cyan-500/80 uppercase tracking-tighter font-bold">
                         DATA ANALYST | BUSINESS & SYSTEMS ANALYTICS | AI ENABLED AUTOMATION
                     </p>
                     <p className="text-[10px] font-mono opacity-50 uppercase tracking-widest">
                         SQL • Reporting • Dashboards • Data Quality • Product & Operations Insights
                     </p>
-                    <p className="text-xs font-mono mt-3 opacity-50">Portfolio: https://osteeen.github.io/DaAustin/</p>
+                    <p className="text-xs font-mono mt-3 opacity-50">Portfolio: https://datawithaustin.com/</p>
                 </div>
 
                 <div className="p-4 bg-neutral-900/50 rounded-xl border border-neutral-800">

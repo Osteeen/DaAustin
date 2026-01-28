@@ -43,9 +43,7 @@ export const ContactContent: React.FC = () => {
                 <a href="tel:+2347057585612" className="block text-base md:text-lg font-black text-white hover:text-cyan-500 transition-colors font-mono">
                     +234 705 758 5612
                 </a>
-                <a href="tel:+13322224932" className="block text-base md:text-lg font-black text-white hover:text-cyan-500 transition-colors font-mono">
-                    +1 332 222 4932
-                </a>
+
                 <a href="mailto:austinjohn337@gmail.com" className="block text-base md:text-lg font-black text-white hover:text-cyan-500 transition-colors mt-1">
                     austinjohn337@gmail.com
                 </a>
