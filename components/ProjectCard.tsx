@@ -58,7 +58,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           {/* Background Image with Zoom Effect - Optimized for Safari */}
           <div
             className="absolute inset-0 bg-cover bg-top opacity-30 group-hover:opacity-50 hover-scale-safari transition-all duration-700 ease-out will-change-transform"
-            style={{ backgroundImage: `url(${(import.meta as any).env.BASE_URL}tsibg-optimized.png)` }}
+            style={{ backgroundImage: `url("${(import.meta as any).env.BASE_URL}${project.image.startsWith('/') ? project.image.slice(1) : project.image}")` }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/80 to-transparent"></div>
           <div className="absolute bottom-6 left-8 right-8 z-20">
@@ -159,9 +159,18 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                         </svg>
                       </a>
                     )}
-                    <p className="text-xl text-neutral-400 font-medium italic leading-relaxed">
+                    <p className="text-xl text-neutral-400 font-medium italic leading-relaxed mb-12">
                       {project.tldr}
                     </p>
+
+                    {/* Project Main Image in Modal */}
+                    <div className="mb-16 rounded-[2rem] overflow-hidden border border-neutral-800">
+                      <img
+                        src={(import.meta as any).env.BASE_URL + (project.image.startsWith('/') ? project.image.slice(1) : project.image)}
+                        alt={project.title}
+                        className="w-full h-auto"
+                      />
+                    </div>
                   </header>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
@@ -185,6 +194,18 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                       <p className="text-sm text-neutral-300 leading-loose whitespace-pre-line font-medium mb-8">
                         {project.deepDive.action}
                       </p>
+
+                      {/* Optional Secondary Image */}
+                      {project.secondaryImage && (
+                        <div className="mb-8 rounded-2xl overflow-hidden border border-neutral-800">
+                          <img
+                            src={(import.meta as any).env.BASE_URL + (project.secondaryImage.startsWith('/') ? project.secondaryImage.slice(1) : project.secondaryImage)}
+                            alt={`${project.title} additional context`}
+                            className="w-full h-auto"
+                          />
+                        </div>
+                      )}
+
                       <div className="bg-neutral-950 p-6 rounded-2xl border border-neutral-800">
                         <span className="text-[9px] font-black text-neutral-400 uppercase tracking-widest block mb-4">Pipeline Logic</span>
                         <p className="text-[12px] mono text-neutral-400 whitespace-pre-line leading-relaxed">

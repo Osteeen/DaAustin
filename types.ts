@@ -32,6 +32,7 @@ export interface Project {
   impact: ProjectImpact[];
   tools: string[];
   image: string;
+  secondaryImage?: string;
   link?: string;
   deepDive: ProjectDeepDive;
 }

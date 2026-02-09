@@ -95,9 +95,13 @@ const App: React.FC = () => {
             <h3 className="text-[10px] font-black text-neutral-500 uppercase tracking-[0.4em] italic">Selected Projects</h3>
             <div className="h-[1px] flex-1 bg-neutral-800/50 transition-colors"></div>
           </div>
-          <section className="rounded-3xl overflow-hidden shadow-2xl shadow-cyan-500/5 h-fit">
-            <ProjectCard project={PROJECTS[0]} />
-          </section>
+          <div className="flex flex-col gap-6">
+            {PROJECTS.map((project) => (
+              <section key={project.id} className="rounded-3xl overflow-hidden shadow-2xl shadow-cyan-500/5 h-fit">
+                <ProjectCard project={project} />
+              </section>
+            ))}
+          </div>
 
           {/* CTA Card */}
           <section className="min-h-48 bg-gradient-to-br from-neutral-900 via-neutral-900 to-cyan-950/20 border border-neutral-800 rounded-[2.5rem] flex flex-col md:flex-row items-center justify-between px-10 md:px-16 py-12 gap-12 text-center md:text-left h-fit mt-auto shadow-2xl shadow-cyan-500/5 theme-transition">
