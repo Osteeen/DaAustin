@@ -48,7 +48,7 @@ const App: React.FC = () => {
               <StatusBadge />
             </div>
             <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tighter text-white leading-[0.85] uppercase italic transition-colors">
-              Data <br />
+              AI + Data <br />
               Analyst<span className="text-cyan-500">.</span>
             </h1>
             <p className="mt-10 text-neutral-400 max-w-2xl text-lg md:text-xl font-medium leading-relaxed mx-auto md:mx-0">
