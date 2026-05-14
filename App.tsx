@@ -62,7 +62,7 @@ const App: React.FC = () => {
 
         <div className="flex flex-col lg:items-end gap-3 w-full lg:w-auto text-center lg:text-right">
           <div className="flex gap-8 mt-6 justify-center lg:justify-end items-center">
-            <button onClick={() => setActiveModal('resume')} className="text-xs font-black text-cyan-500 hover:text-cyan-400 transition-colors uppercase tracking-widest h-8 flex items-center border-b-2 border-cyan-500/30 hover:border-cyan-500 whitespace-nowrap">Resume</button>
+            <button onClick={() => setActiveModal('resume')} className="text-xs font-bold text-neutral-500 hover:text-white transition-colors uppercase tracking-widest h-8 flex items-center border-b-2 border-transparent whitespace-nowrap">Resume</button>
             <button onClick={() => setActiveModal('about')} className="text-xs font-bold text-neutral-500 hover:text-white transition-colors uppercase tracking-widest h-8 flex items-center border-b-2 border-transparent whitespace-nowrap">About me</button>
             <a href="https://www.linkedin.com/in/austin-john-ogbormeh-422330147/" target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-neutral-500 hover:text-white transition-colors uppercase tracking-widest h-8 flex items-center border-b-2 border-transparent whitespace-nowrap">LinkedIn</a>
             <button onClick={() => setActiveModal('contact')} className="text-xs font-bold text-neutral-500 hover:text-white transition-colors uppercase tracking-widest h-8 flex items-center border-b-2 border-transparent whitespace-nowrap">Contact</button>
