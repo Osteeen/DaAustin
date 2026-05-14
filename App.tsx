@@ -47,12 +47,15 @@ const App: React.FC = () => {
               <h2 className="text-3xl font-black text-white tracking-tighter uppercase italic leading-none">Austin John</h2>
               <StatusBadge />
             </div>
-            <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tighter text-white leading-[0.85] uppercase italic transition-colors">
-              AI + Data <br />
-              Analyst<span className="text-cyan-500">.</span>
+            <p className="text-xs text-neutral-500 uppercase tracking-widest font-semibold mb-4">
+              Head of IT @ NetMFB &nbsp;·&nbsp; CTO @ Digajo &nbsp;·&nbsp; Founder @ TSI &amp; TrueFlow AI
+            </p>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tighter text-white leading-[1.05] uppercase italic transition-colors">
+              AI Engineer <br />
+              Product <span className="text-cyan-500">Builder.</span>
             </h1>
             <p className="mt-10 text-neutral-400 max-w-2xl text-lg md:text-xl font-medium leading-relaxed mx-auto md:mx-0">
-              I analyze <span className="text-white">business data</span> to uncover insights, solve operational problems, and drive <span className="text-cyan-400 font-bold">better decisions</span> using analytics and AI.
+              I build <span className="text-white">AI systems</span> and data infrastructure that power smarter operations — from <span className="text-white">automating workflows</span> to shipping AI products that solve <span className="text-cyan-400 font-bold">real business problems</span>.
             </p>
           </div>
         </div>

@@ -2,11 +2,11 @@ import React from 'react';
 
 export const ThinkCard: React.FC = () => {
   const steps = [
-    { title: 'Business First', desc: 'Start from the decision, not the tool' },
-    { title: 'Data Reality', desc: 'Understand the data mess before building' },
-    { title: 'System Design', desc: 'Build pipelines and metrics, not just charts' },
-    { title: 'AI Where It Makes Sense', desc: 'Use AI for leverage, not hype' },
-    { title: 'Decision Impact', desc: 'Measure success by business outcomes, not visuals' },
+    { title: 'Start with the problem', desc: 'Map the real workflow before touching any tool or model' },
+    { title: 'Design the system', desc: 'Architect the full pipeline — inputs, logic, outputs, edge cases — before building' },
+    { title: 'AI as the engine', desc: 'Use AI for the hard reasoning and pattern work. Keep humans for judgment calls' },
+    { title: 'Build to run itself', desc: 'If it needs babysitting, it is not done. Automation should be autonomous' },
+    { title: 'Measure by outcome', desc: 'Does it save time, make money, or reduce risk? That is the only metric that matters' },
   ];
 
   return (
@@ -26,7 +26,7 @@ export const ThinkCard: React.FC = () => {
         ))}
       </div>
       <div className="mt-10 pt-4 border-t border-neutral-800/50">
-        <p className="text-[10px] mono text-neutral-600 uppercase">Framework: Decision-First Engineering</p>
+        <p className="text-[10px] mono text-neutral-600 uppercase">Framework: Systems-First AI</p>
       </div>
     </div>
   );

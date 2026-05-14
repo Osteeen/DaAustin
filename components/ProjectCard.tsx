@@ -52,7 +52,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 
   return (
     <>
-      <div className="group relative flex flex-col h-full bg-neutral-900/40 hover:bg-neutral-900/60 transition-all duration-300 border border-neutral-800 hover:border-neutral-700 overflow-hidden rounded-[2rem] theme-transition">
+      <div onClick={handleOpen} className="group relative flex flex-col h-full bg-neutral-900/40 hover:bg-neutral-900/60 transition-all duration-300 border border-neutral-800 hover:border-neutral-700 overflow-hidden rounded-[2rem] theme-transition cursor-pointer">
         {/* Placeholder Header Section */}
         <div className="relative h-64 overflow-hidden bg-neutral-800 flex items-center justify-center p-8 transition-colors">
           {/* Background Image with Zoom Effect - Optimized for Safari */}
@@ -108,7 +108,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
               </svg>
             </button>
             {project.link && (
-              <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-[10px] font-bold text-neutral-400 hover:text-cyan-500 uppercase transition-colors">
+              <a href={project.link} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()} className="text-[10px] font-bold text-neutral-400 hover:text-cyan-500 uppercase transition-colors">
                 Live Link
               </a>
             )}
