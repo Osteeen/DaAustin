@@ -13,7 +13,7 @@ export const ResumeContent: React.FC = () => {
                         AI ENGINEER | PRODUCT BUILDER | FOUNDER
                     </p>
                     <p className="text-[10px] font-mono opacity-50 uppercase tracking-widest">
-                        LLM APIs • Voice AI • Workflow Automation • Product Development • AI Systems
+                        AI Systems • Product Development • Workflow Automation • Voice AI
                     </p>
                     <p className="text-xs font-mono mt-3 opacity-50">Portfolio: https://datawithaustin.com/</p>
                 </div>
@@ -21,7 +21,7 @@ export const ResumeContent: React.FC = () => {
                 <div className="p-4 bg-neutral-900/50 rounded-xl border border-neutral-800">
                     <h4 className="text-sm font-bold text-white uppercase tracking-widest mb-2">Professional Summary</h4>
                     <p className="text-sm leading-relaxed text-neutral-400">
-                        AI Engineer and Product Builder with 4+ years of experience designing and shipping AI-powered systems that solve real operational problems. Founder of TrueFlow AI and TrueStay Insight. CTO of DigAjo. Currently Head of IT at Net Microfinance Bank. I build end-to-end AI products — from Instagram DM automation to voice AI feedback systems — that cut costs, save time, and create measurable business value. Experienced across financial services, fintech, and hospitality.
+                        AI Engineer and Product Builder with 4+ years of experience designing and shipping AI-powered systems that solve real operational problems. Founder of TrueFlow AI and TrueStay Insight. CTO of DigAjo. Currently Head of IT at Net Microfinance Bank. I build end-to-end AI products - from Instagram DM automation to voice AI feedback systems - that cut costs, save time, and create measurable business value. Experienced across financial services, fintech, and hospitality.
                     </p>
                 </div>
             </div>
