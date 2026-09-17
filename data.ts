@@ -11,38 +11,6 @@ export const JOURNEY_DATA: JourneyNode[] = [
 
 export const PROJECTS: Project[] = [
   {
-    id: 'p4',
-    title: 'TrueFlow AI — AI Sales Assistant for Instagram DMs',
-    subtitle: 'AI Sales Automation · Founder',
-    tldr: 'An AI-powered Instagram DM assistant that replies to customers in under 5 seconds, answers product questions, negotiates smartly, and alerts business owners the moment a customer is ready to buy.',
-    problem: 'Nigerian businesses selling on Instagram lose sales every day to slow DM replies. Customers message multiple stores and buy from whoever replies first. Sellers can\'t be online 24/7 — and answering the same questions about price, availability, and delivery burns hours every day.',
-    built: 'I built TrueFlow AI — a Meta-approved Instagram DM automation platform that handles every incoming message instantly: answering product questions from a live catalog, negotiating discounts within set rules, detecting purchase intent, and sending real-time alerts when a customer is ready to pay.',
-    impact: [
-      { metric: 'Reply Time', value: '< 5 Seconds', description: 'Average AI response time — 24/7, including nights, weekends, and public holidays.' },
-      { metric: 'Leads Lost', value: '0', description: 'Every DM gets an instant, intelligent reply no matter when it arrives.' },
-      { metric: 'Setup Time', value: '< 1 Hour', description: 'Connect Instagram, upload catalog, go live — no technical setup required.' },
-      { metric: 'Meta Verified', value: '✓ Approved', description: 'Official Meta App Review approved — zero risk of account disable.' }
-    ],
-    tools: ['AI', 'Instagram API', 'Meta App Review', 'Sales Automation', 'NLP'],
-    image: 'trueflow-og.png',
-    link: 'https://trueflowai.dev/',
-    deepDive: {
-      situation: 'Selling on Instagram in Nigeria is fast-paced and competitive. Customers DM 5 stores at once and buy from whoever replies first. The average Instagram shopper moves on in under 3 minutes with no reply. Most business owners can\'t be glued to their phones 24/7 — and their teams spend hours every day answering the exact same 10 questions.',
-      task: 'Build an AI sales assistant that handles Instagram DMs automatically — replying instantly, answering product questions accurately, negotiating intelligently, and alerting the owner only when a customer is truly ready to buy. All without risking the Instagram account.',
-      action: 'I designed and built TrueFlow AI as a Meta-approved platform using the official Instagram Messaging API. The system: connects to any business Instagram page in one click; ingests a product catalog so the AI knows every price, variant, and delivery detail; replies to every incoming DM in seconds with accurate, natural responses; negotiates discounts in steps based on owner-defined rules; detects hot lead signals (payment mentions, urgency, buy intent) and fires instant email alerts; hands off gracefully to a human when requested; and provides a dashboard of all conversations, leads, and performance metrics.',
-      result: '• Every customer DM answered in under 5 seconds — 24/7\n• Zero leads lost to slow or missed replies\n• Business owners only engage when a customer is ready to pay\n• Handles pidgin, ₦ pricing, and Nigerian buying patterns naturally\n• Officially Meta-approved — no account risk whatsoever\n• Up and running in under an hour with no technical knowledge needed',
-      logic: '• On incoming DM: classify intent (question, negotiation, buy signal, human request)\n• If product question: match to catalog and reply with accurate details\n• If price negotiation: apply discount rules — step down gradually, never jump to max\n• If buy signal detected: send instant email alert to owner with conversation context\n• If human handoff requested: pause AI, notify owner, resume after resolution\n• All conversations logged and visible in owner dashboard',
-      architecture: '• Official Instagram Messaging API (Meta App Review approved)\n• AI engine trained on product catalog, business tone, and Nigerian market context\n• Real-time intent classification layer (question / negotiation / hot lead / handoff)\n• Rules-based discount negotiation engine with owner-configurable limits\n• Hot lead alert pipeline — instant email notification with conversation context\n• Owner dashboard for conversation history, lead tracking, and performance analytics\n• Pricing: Starter ₦25,000/month · Growth ₦50,000/month',
-      metricsImproved: [
-        'Instagram DM response time',
-        'Lead capture rate from DM conversations',
-        'Time spent on repetitive customer questions',
-        'Sales conversion from Instagram',
-        'Owner visibility into customer buying intent'
-      ]
-    }
-  },
-  {
     id: 'p3',
     title: 'DigAjo — Digital Ajo Savings Platform',
     subtitle: 'Community Fintech · CTO',
@@ -71,6 +39,38 @@ export const PROJECTS: Project[] = [
         'Transparency of group finances',
         'Time spent coordinating and chasing contributions',
         'Access to structured savings for informal groups'
+      ]
+    }
+  },
+  {
+    id: 'p4',
+    title: 'TrueFlow AI — AI Sales Assistant for Instagram DMs',
+    subtitle: 'AI Sales Automation · Founder',
+    tldr: 'An AI-powered Instagram DM assistant that replies to customers in under 5 seconds, answers product questions, negotiates smartly, and alerts business owners the moment a customer is ready to buy.',
+    problem: 'Nigerian businesses selling on Instagram lose sales every day to slow DM replies. Customers message multiple stores and buy from whoever replies first. Sellers can\'t be online 24/7 — and answering the same questions about price, availability, and delivery burns hours every day.',
+    built: 'I built TrueFlow AI — a Meta-approved Instagram DM automation platform that handles every incoming message instantly: answering product questions from a live catalog, negotiating discounts within set rules, detecting purchase intent, and sending real-time alerts when a customer is ready to pay.',
+    impact: [
+      { metric: 'Reply Time', value: '< 5 Seconds', description: 'Average AI response time — 24/7, including nights, weekends, and public holidays.' },
+      { metric: 'Leads Lost', value: '0', description: 'Every DM gets an instant, intelligent reply no matter when it arrives.' },
+      { metric: 'Setup Time', value: '< 1 Hour', description: 'Connect Instagram, upload catalog, go live — no technical setup required.' },
+      { metric: 'Meta Verified', value: '✓ Approved', description: 'Official Meta App Review approved — zero risk of account disable.' }
+    ],
+    tools: ['AI', 'Instagram API', 'Meta App Review', 'Sales Automation', 'NLP'],
+    image: 'trueflow-og.png',
+    link: 'https://trueflowai.dev/',
+    deepDive: {
+      situation: 'Selling on Instagram in Nigeria is fast-paced and competitive. Customers DM 5 stores at once and buy from whoever replies first. The average Instagram shopper moves on in under 3 minutes with no reply. Most business owners can\'t be glued to their phones 24/7 — and their teams spend hours every day answering the exact same 10 questions.',
+      task: 'Build an AI sales assistant that handles Instagram DMs automatically — replying instantly, answering product questions accurately, negotiating intelligently, and alerting the owner only when a customer is truly ready to buy. All without risking the Instagram account.',
+      action: 'I designed and built TrueFlow AI as a Meta-approved platform using the official Instagram Messaging API. The system: connects to any business Instagram page in one click; ingests a product catalog so the AI knows every price, variant, and delivery detail; replies to every incoming DM in seconds with accurate, natural responses; negotiates discounts in steps based on owner-defined rules; detects hot lead signals (payment mentions, urgency, buy intent) and fires instant email alerts; hands off gracefully to a human when requested; and provides a dashboard of all conversations, leads, and performance metrics.',
+      result: '• Every customer DM answered in under 5 seconds — 24/7\n• Zero leads lost to slow or missed replies\n• Business owners only engage when a customer is ready to pay\n• Handles pidgin, ₦ pricing, and Nigerian buying patterns naturally\n• Officially Meta-approved — no account risk whatsoever\n• Up and running in under an hour with no technical knowledge needed',
+      logic: '• On incoming DM: classify intent (question, negotiation, buy signal, human request)\n• If product question: match to catalog and reply with accurate details\n• If price negotiation: apply discount rules — step down gradually, never jump to max\n• If buy signal detected: send instant email alert to owner with conversation context\n• If human handoff requested: pause AI, notify owner, resume after resolution\n• All conversations logged and visible in owner dashboard',
+      architecture: '• Official Instagram Messaging API (Meta App Review approved)\n• AI engine trained on product catalog, business tone, and Nigerian market context\n• Real-time intent classification layer (question / negotiation / hot lead / handoff)\n• Rules-based discount negotiation engine with owner-configurable limits\n• Hot lead alert pipeline — instant email notification with conversation context\n• Owner dashboard for conversation history, lead tracking, and performance analytics\n• Pricing: Starter ₦25,000/month · Growth ₦50,000/month',
+      metricsImproved: [
+        'Instagram DM response time',
+        'Lead capture rate from DM conversations',
+        'Time spent on repetitive customer questions',
+        'Sales conversion from Instagram',
+        'Owner visibility into customer buying intent'
       ]
     }
   },
