@@ -55,6 +55,36 @@ export const ResumeContent: React.FC = () => {
 
                 <div className="space-y-6">
 
+                    {/* NetMFB Head of IT */}
+                    <div>
+                        <div className="flex justify-between items-baseline flex-wrap gap-2">
+                            <h5 className="font-bold text-white">Head of Information Technology</h5>
+                            <span className="text-xs font-mono text-neutral-500">January 2025 - Present</span>
+                        </div>
+                        <p className="text-cyan-500 text-xs uppercase tracking-wide mb-2">Net Microfinance Bank (NETMFB), Abuja</p>
+                        <ul className="list-disc list-inside space-y-1 text-sm text-neutral-400 marker:text-neutral-600">
+                            <li>Led development and deployment of a Corporate Internet Banking platform integrated with the core banking API, delivering account management, transfers and multi-level approval workflows to corporate customers on a multi-tenant architecture.</li>
+                            <li>Manage integrations with NIBSS, Interswitch, Remita, Dojah and multiple settlement banks, and support for wholesale API partners consuming the bank's services, maintaining transaction flow across inward and outward payment rails.</li>
+                            <li>Recovered unsettled interbank transactions by reconciling bank records against 42,000+ line settlement statements, identifying value credited to customers but never settled, and driving resolution with NIBSS and the settlement bank.</li>
+                            <li>Lead the bank's 2026 CBN Cybersecurity Self Assessment Tool submission and established a formal risk register and regulatory incident reporting process, closing a documentation gap ahead of examination.</li>
+                            <li>Manage core banking vendor relationships and platform infrastructure, driving root cause investigation and remediation of production defects affecting transaction integrity, and enforcing interim operational controls to prevent recurrence.</li>
+                        </ul>
+                    </div>
+
+                    {/* NetMFB IT Support */}
+                    <div>
+                        <div className="flex justify-between items-baseline flex-wrap gap-2">
+                            <h5 className="font-bold text-white">IT Support Specialist</h5>
+                            <span className="text-xs font-mono text-neutral-500">October 2023 - January 2025</span>
+                        </div>
+                        <p className="text-cyan-500 text-xs uppercase tracking-wide mb-2">Net Microfinance Bank (NETMFB), Abuja</p>
+                        <ul className="list-disc list-inside space-y-1 text-sm text-neutral-400 marker:text-neutral-600">
+                            <li>Built recurring operational and performance reports, reducing manual reporting time by over 50%.</li>
+                            <li>Monitored platform performance metrics and transaction behavior, identifying failure patterns before escalation.</li>
+                            <li>Supported data-driven incident management that improved uptime consistency and reduced repeat failures.</li>
+                        </ul>
+                    </div>
+
                     {/* TrueFlow AI */}
                     <div>
                         <div className="flex justify-between items-baseline flex-wrap gap-2">
@@ -63,10 +93,10 @@ export const ResumeContent: React.FC = () => {
                         </div>
                         <p className="text-cyan-500 text-xs uppercase tracking-wide mb-2">TrueFlow AI</p>
                         <ul className="list-disc list-inside space-y-1 text-sm text-neutral-400 marker:text-neutral-600">
-                            <li>Built TrueFlow AI — a Meta-approved AI sales assistant that replies to Instagram DMs in under 5 seconds for Nigerian businesses.</li>
+                            <li>Built TrueFlow AI - a Meta-approved AI sales assistant that replies to Instagram DMs in under 5 seconds for Nigerian businesses.</li>
                             <li>Designed the full product: Instagram API integration, AI intent classification, smart discount negotiation engine, and real-time hot lead alerts.</li>
-                            <li>Passed Meta App Review and achieved official Tech Provider status — zero account risk for customers.</li>
-                            <li>Handles product questions, price negotiations, and purchase intent detection automatically — 24/7 without human involvement.</li>
+                            <li>Passed Meta App Review and achieved official Tech Provider status - zero account risk for customers.</li>
+                            <li>Handles product questions, price negotiations, and purchase intent detection automatically - 24/7 without human involvement.</li>
                         </ul>
                     </div>
 
@@ -93,40 +123,10 @@ export const ResumeContent: React.FC = () => {
                         </div>
                         <p className="text-cyan-500 text-xs uppercase tracking-wide mb-2">DigAjo</p>
                         <ul className="list-disc list-inside space-y-1 text-sm text-neutral-400 marker:text-neutral-600">
-                            <li>Co-founded and lead engineering for DigAjo — a mobile fintech app that digitizes Nigeria's traditional ajo/esusu rotating savings practice.</li>
+                            <li>Co-founded and lead engineering for DigAjo - a mobile fintech app that digitizes Nigeria's traditional ajo/esusu rotating savings practice.</li>
                             <li>Led technical architecture: automated contribution scheduling, rotating payout distribution, real-time transaction ledger, and digital wallet.</li>
-                            <li>Built on regulated Nigerian banking infrastructure — guaranteed payouts, no manual coordination, full transparency.</li>
+                            <li>Built on regulated Nigerian banking infrastructure - guaranteed payouts, no manual coordination, full transparency.</li>
                             <li>Available on Android, iOS launching soon.</li>
-                        </ul>
-                    </div>
-
-                    {/* NetMFB Head of IT */}
-                    <div>
-                        <div className="flex justify-between items-baseline flex-wrap gap-2">
-                            <h5 className="font-bold text-white">Head of IT</h5>
-                            <span className="text-xs font-mono text-neutral-500">January 2025 - Present</span>
-                        </div>
-                        <p className="text-cyan-500 text-xs uppercase tracking-wide mb-2">Net Microfinance Bank (NETMFB), Abuja</p>
-                        <ul className="list-disc list-inside space-y-1 text-sm text-neutral-400 marker:text-neutral-600">
-                            <li>Oversee all IT systems, infrastructure, and operations across the bank — covering 10,000+ monthly transactions.</li>
-                            <li>Implemented data-driven process improvements that reduced system downtime by over 30% within the first 6 months.</li>
-                            <li>Led root cause analysis across incidents using logs, reports, and historical data — cutting mean resolution time by over 35%.</li>
-                            <li>Designed and maintained performance dashboards tracking transaction volumes, uptime, failure rates, and customer activity.</li>
-                            <li>Partnered with Operations, Finance, and Product teams to drive system reliability and operational improvements.</li>
-                        </ul>
-                    </div>
-
-                    {/* NetMFB IT Support */}
-                    <div>
-                        <div className="flex justify-between items-baseline flex-wrap gap-2">
-                            <h5 className="font-bold text-white">IT Support Specialist</h5>
-                            <span className="text-xs font-mono text-neutral-500">October 2023 - January 2025</span>
-                        </div>
-                        <p className="text-cyan-500 text-xs uppercase tracking-wide mb-2">Net Microfinance Bank (NETMFB), Abuja</p>
-                        <ul className="list-disc list-inside space-y-1 text-sm text-neutral-400 marker:text-neutral-600">
-                            <li>Built recurring operational and performance reports, reducing manual reporting time by over 50%.</li>
-                            <li>Monitored platform performance metrics and transaction behavior, identifying failure patterns before escalation.</li>
-                            <li>Supported data-driven incident management that improved uptime consistency and reduced repeat failures.</li>
                         </ul>
                     </div>
 
