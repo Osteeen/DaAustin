@@ -55,7 +55,7 @@ const App: React.FC = () => {
               Product <span className="text-cyan-500">Builder.</span>
             </h1>
             <p className="mt-10 text-neutral-400 max-w-2xl text-lg md:text-xl font-medium leading-relaxed mx-auto md:mx-0">
-              I build <span className="text-white">AI systems</span> and data infrastructure that power smarter operations — from <span className="text-white">automating workflows</span> to shipping AI products that solve <span className="text-cyan-400 font-bold">real business problems</span>.
+              I build <span className="text-white">fintech systems</span> - the infrastructure banks and apps run on, and the <span className="text-white">AI products</span> people use on top of it, solving <span className="text-cyan-400 font-bold">real business problems</span>.
             </p>
           </div>
         </div>
