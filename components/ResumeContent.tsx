@@ -12,9 +12,6 @@ export const ResumeContent: React.FC = () => {
                     <p className="text-xs font-mono mt-2 text-cyan-500/80 uppercase tracking-tighter font-bold">
                         FULL STACK DEVELOPER | FINTECH SYSTEMS | AI ENGINEER
                     </p>
-                    <p className="text-[10px] font-mono opacity-50 uppercase tracking-widest">
-                        Full Stack Development • Fintech Systems • AI Engineer
-                    </p>
                     <p className="text-xs font-mono mt-3 opacity-50">Portfolio: https://datawithaustin.com/</p>
                 </div>
 
