@@ -51,8 +51,8 @@ const App: React.FC = () => {
               Head of IT @ NetMFB &nbsp;·&nbsp; CTO @ Digajo &nbsp;·&nbsp; Founder @ TSI &amp; TrueFlow AI
             </p>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tighter text-white leading-[1.05] uppercase italic transition-colors">
-              AI Engineer <br />
-              Product <span className="text-cyan-500">Builder.</span>
+              Full Stack <br />
+              <span className="text-cyan-500">Developer.</span>
             </h1>
             <p className="mt-10 text-neutral-400 max-w-2xl text-lg md:text-xl font-medium leading-relaxed mx-auto md:mx-0">
               I build <span className="text-white">fintech systems</span> - the infrastructure banks and apps run on, and the <span className="text-white">AI products</span> people use on top of it, solving <span className="text-cyan-400 font-bold">real business problems</span>.

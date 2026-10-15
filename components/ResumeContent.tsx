@@ -10,10 +10,10 @@ export const ResumeContent: React.FC = () => {
                     <p className="text-cyan-500 font-mono text-sm tracking-wider">Abuja, Nigeria</p>
                     <p className="text-sm font-mono mt-1">austinjohn337@gmail.com • +2347057585612</p>
                     <p className="text-xs font-mono mt-2 text-cyan-500/80 uppercase tracking-tighter font-bold">
-                        AI ENGINEER | PRODUCT BUILDER | FOUNDER
+                        FULL STACK DEVELOPER | FINTECH SYSTEMS | AI ENGINEER
                     </p>
                     <p className="text-[10px] font-mono opacity-50 uppercase tracking-widest">
-                        AI Systems • Product Development • Workflow Automation • Voice AI
+                        Full Stack Development • Fintech Systems • AI Engineer
                     </p>
                     <p className="text-xs font-mono mt-3 opacity-50">Portfolio: https://datawithaustin.com/</p>
                 </div>
@@ -21,7 +21,7 @@ export const ResumeContent: React.FC = () => {
                 <div className="p-4 bg-neutral-900/50 rounded-xl border border-neutral-800">
                     <h4 className="text-sm font-bold text-white uppercase tracking-widest mb-2">Professional Summary</h4>
                     <p className="text-sm leading-relaxed text-neutral-400">
-                        AI Engineer and Product Builder with 4+ years of experience designing and shipping AI-powered systems that solve real operational problems. Founder of TrueFlow AI and TrueStay Insight. CTO of DigAjo. Currently Head of IT at Net Microfinance Bank. I build end-to-end AI products - from Instagram DM automation to voice AI feedback systems - that cut costs, save time, and create measurable business value. Experienced across financial services, fintech, and hospitality.
+                        Full Stack Developer with 4+ years of experience building banking and fintech systems. Head of IT at Net Microfinance Bank, where I led the Corporate Internet Banking platform and manage payment integrations with NIBSS, Interswitch and Remita. Co-CEO and CTO of DigAjo, and founder of TrueFlow AI and TrueStay Insight, two AI products running in production. Experienced across financial services, fintech, and hospitality.
                     </p>
                 </div>
             </div>
@@ -31,18 +31,18 @@ export const ResumeContent: React.FC = () => {
                 <h4 className="text-sm font-bold text-white uppercase tracking-widest border-b border-neutral-800 pb-2">Core Skills</h4>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 text-sm">
                     <ul className="list-disc list-inside space-y-1 marker:text-cyan-500">
-                        <li>AI Systems Design & Integration</li>
+                        <li>Full Stack Development</li>
+                        <li>React & React Native</li>
+                        <li>TypeScript & Node.js</li>
+                        <li>REST API Design & Integration</li>
+                        <li>Payment & Banking Integrations</li>
                         <li>LLM & Voice AI Development</li>
-                        <li>Workflow Automation (n8n, Make.com)</li>
-                        <li>Product Development & Shipping</li>
-                        <li>Instagram / Meta API Integration</li>
-                        <li>React & React Native Development</li>
                     </ul>
                     <ul className="list-disc list-inside space-y-1 marker:text-cyan-500">
                         <li>Python Scripting & Automation</li>
-                        <li>Prompt Engineering</li>
-                        <li>IT Infrastructure & Systems Management</li>
                         <li>SQL Analysis & Reporting</li>
+                        <li>IT Infrastructure & Systems Management</li>
+                        <li>Cybersecurity & Regulatory Compliance</li>
                         <li>Cross-functional Leadership</li>
                         <li>Stakeholder Communication</li>
                     </ul>
@@ -71,17 +71,18 @@ export const ResumeContent: React.FC = () => {
                         </ul>
                     </div>
 
-                    {/* NetMFB IT Support */}
+                    {/* DigAjo */}
                     <div>
                         <div className="flex justify-between items-baseline flex-wrap gap-2">
-                            <h5 className="font-bold text-white">IT Support Specialist</h5>
-                            <span className="text-xs font-mono text-neutral-500">October 2023 - January 2025</span>
+                            <h5 className="font-bold text-white">Co-CEO & CTO</h5>
+                            <span className="text-xs font-mono text-neutral-500">June 2026 - Present</span>
                         </div>
-                        <p className="text-cyan-500 text-xs uppercase tracking-wide mb-2">Net Microfinance Bank (NETMFB), Abuja</p>
+                        <p className="text-cyan-500 text-xs uppercase tracking-wide mb-2">DigAjo</p>
                         <ul className="list-disc list-inside space-y-1 text-sm text-neutral-400 marker:text-neutral-600">
-                            <li>Built recurring operational and performance reports, reducing manual reporting time by over 50%.</li>
-                            <li>Monitored platform performance metrics and transaction behavior, identifying failure patterns before escalation.</li>
-                            <li>Supported data-driven incident management that improved uptime consistency and reduced repeat failures.</li>
+                            <li>Co-founded and lead engineering for DigAjo - a mobile fintech app that digitizes Nigeria's traditional ajo/esusu rotating savings practice.</li>
+                            <li>Led technical architecture: automated contribution scheduling, rotating payout distribution, real-time transaction ledger, and digital wallet.</li>
+                            <li>Built on regulated Nigerian banking infrastructure - guaranteed payouts, no manual coordination, full transparency.</li>
+                            <li>Available on Android, iOS launching soon.</li>
                         </ul>
                     </div>
 
@@ -104,7 +105,7 @@ export const ResumeContent: React.FC = () => {
                     <div>
                         <div className="flex justify-between items-baseline flex-wrap gap-2">
                             <h5 className="font-bold text-white">Founder</h5>
-                            <span className="text-xs font-mono text-neutral-500">2024 - Present</span>
+                            <span className="text-xs font-mono text-neutral-500">2025 - Present</span>
                         </div>
                         <p className="text-cyan-500 text-xs uppercase tracking-wide mb-2">TrueStay Insight (TSI)</p>
                         <ul className="list-disc list-inside space-y-1 text-sm text-neutral-400 marker:text-neutral-600">
@@ -115,18 +116,17 @@ export const ResumeContent: React.FC = () => {
                         </ul>
                     </div>
 
-                    {/* DigAjo */}
+                    {/* NetMFB IT Support */}
                     <div>
                         <div className="flex justify-between items-baseline flex-wrap gap-2">
-                            <h5 className="font-bold text-white">Co-Founder & CTO</h5>
-                            <span className="text-xs font-mono text-neutral-500">2024 - Present</span>
+                            <h5 className="font-bold text-white">IT Support Specialist</h5>
+                            <span className="text-xs font-mono text-neutral-500">October 2023 - January 2025</span>
                         </div>
-                        <p className="text-cyan-500 text-xs uppercase tracking-wide mb-2">DigAjo</p>
+                        <p className="text-cyan-500 text-xs uppercase tracking-wide mb-2">Net Microfinance Bank (NETMFB), Abuja</p>
                         <ul className="list-disc list-inside space-y-1 text-sm text-neutral-400 marker:text-neutral-600">
-                            <li>Co-founded and lead engineering for DigAjo - a mobile fintech app that digitizes Nigeria's traditional ajo/esusu rotating savings practice.</li>
-                            <li>Led technical architecture: automated contribution scheduling, rotating payout distribution, real-time transaction ledger, and digital wallet.</li>
-                            <li>Built on regulated Nigerian banking infrastructure - guaranteed payouts, no manual coordination, full transparency.</li>
-                            <li>Available on Android, iOS launching soon.</li>
+                            <li>Built recurring operational and performance reports, reducing manual reporting time by over 50%.</li>
+                            <li>Monitored platform performance metrics and transaction behavior, identifying failure patterns before escalation.</li>
+                            <li>Supported data-driven incident management that improved uptime consistency and reduced repeat failures.</li>
                         </ul>
                     </div>
 
@@ -136,9 +136,36 @@ export const ResumeContent: React.FC = () => {
                             <h5 className="font-bold text-white">Data Quality & Search Evaluation Analyst (Contract)</h5>
                             <span className="text-xs font-mono text-neutral-500">May 2022 - October 2023</span>
                         </div>
+                        <p className="text-cyan-500 text-xs uppercase tracking-wide mb-2">Appen</p>
                         <ul className="list-disc list-inside space-y-1 text-sm text-neutral-400 marker:text-neutral-600">
                             <li>Worked on large-scale data quality and relevance evaluation projects involving thousands of records per batch.</li>
                             <li>Applied structured validation frameworks to identify quality gaps and inconsistencies in training and evaluation data.</li>
+                        </ul>
+                    </div>
+
+                    {/* NDC */}
+                    <div>
+                        <div className="flex justify-between items-baseline flex-wrap gap-2">
+                            <h5 className="font-bold text-white">Administrative Data & Reporting Assistant</h5>
+                            <span className="text-xs font-mono text-neutral-500">April 2021 - May 2022</span>
+                        </div>
+                        <p className="text-cyan-500 text-xs uppercase tracking-wide mb-2">National Defence College (NDC), Abuja</p>
+                        <ul className="list-disc list-inside space-y-1 text-sm text-neutral-400 marker:text-neutral-600">
+                            <li>Maintained structured administrative datasets and reporting records used for internal reviews and management decisions.</li>
+                            <li>Supported data entry, reconciliation and documentation workflows across multiple departments.</li>
+                        </ul>
+                    </div>
+
+                    {/* Rhemadok */}
+                    <div>
+                        <div className="flex justify-between items-baseline flex-wrap gap-2">
+                            <h5 className="font-bold text-white">IT Support Specialist</h5>
+                            <span className="text-xs font-mono text-neutral-500">November 2020 - February 2021</span>
+                        </div>
+                        <p className="text-cyan-500 text-xs uppercase tracking-wide mb-2">Rhemadok Oil & Gas Co. Ltd</p>
+                        <ul className="list-disc list-inside space-y-1 text-sm text-neutral-400 marker:text-neutral-600">
+                            <li>Prepared daily operational reports on IT system performance and staff usage, enabling management to identify inefficiencies.</li>
+                            <li>Analyzed support request types and frequency, and recommended solutions that reduced recurring issues by 15%.</li>
                         </ul>
                     </div>
 
@@ -168,7 +195,7 @@ export const ResumeContent: React.FC = () => {
                 <div>
                     <h4 className="text-sm font-bold text-white uppercase tracking-widest mb-3">Core Stack</h4>
                     <p className="text-sm leading-relaxed text-neutral-400">
-                        LLM APIs • Voice AI (Retell AI) • n8n • Make.com • Python • React • React Native • Instagram API • Airtable • SQL • Power BI
+                        React • React Native • TypeScript • Node.js • Python • SQL • REST APIs • PayPal APIs • Meta APIs • Instagram API • LLM APIs • Voice AI (Retell AI) • n8n • Make.com
                     </p>
                 </div>
             </div>

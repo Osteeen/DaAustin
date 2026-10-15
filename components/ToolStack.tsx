@@ -7,9 +7,9 @@ interface ToolStackProps {
 
 export const ToolStack: React.FC<ToolStackProps> = ({ tools }) => {
   const categories: Tool['category'][] = [
-    'AI & Intelligence',
-    'Automation & Pipelines',
     'Product & APIs',
+    'Automation & Pipelines',
+    'AI & Intelligence',
     'Data & Analytics',
   ];
 
