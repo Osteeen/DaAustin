@@ -79,7 +79,7 @@ export const ResumeContent: React.FC = () => {
                             <li>Co-founded and lead engineering for DigAjo - a mobile fintech app that digitizes Nigeria's traditional ajo/esusu rotating savings practice.</li>
                             <li>Led technical architecture: automated contribution scheduling, rotating payout distribution, real-time transaction ledger, and digital wallet.</li>
                             <li>Built on regulated Nigerian banking infrastructure - guaranteed payouts, no manual coordination, full transparency.</li>
-                            <li>Available on Android, iOS launching soon.</li>
+                            <li>Available on Android and iOS.</li>
                         </ul>
                     </div>
 

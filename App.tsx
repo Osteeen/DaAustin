@@ -55,7 +55,7 @@ const App: React.FC = () => {
               <span className="text-cyan-500">Developer.</span>
             </h1>
             <p className="mt-10 text-neutral-400 max-w-2xl text-lg md:text-xl font-medium leading-relaxed mx-auto md:mx-0">
-              I build <span className="text-white">fintech systems</span> - the infrastructure banks and apps run on, and the <span className="text-white">AI products</span> people use on top of it, solving <span className="text-cyan-400 font-bold">real business problems</span>.
+              I <span className="text-white">build software</span> end to end - web apps, mobile apps, APIs and the systems behind them. If it needs to be built, <span className="text-cyan-400 font-bold">I can build it</span>.
             </p>
           </div>
         </div>
@@ -109,12 +109,12 @@ const App: React.FC = () => {
           {/* CTA Card */}
           <section className="min-h-48 bg-gradient-to-br from-neutral-900 via-neutral-900 to-cyan-950/20 border border-neutral-800 rounded-[2.5rem] flex flex-col md:flex-row items-center justify-between px-10 md:px-16 py-12 gap-12 text-center md:text-left h-fit mt-auto shadow-2xl shadow-cyan-500/5 theme-transition">
             <div className="max-w-xl">
-              <h4 className="text-4xl font-black text-white tracking-tight uppercase italic leading-tight">Engineering <br />Decision Clarity</h4>
-              <p className="text-lg text-neutral-500 mt-4 italic font-medium">Ready to bridge the gap between historical reports and operational decision systems?</p>
+              <h4 className="text-4xl font-black text-white tracking-tight uppercase italic leading-tight">Let’s Build <br />Something Real</h4>
+              <p className="text-base md:text-lg text-neutral-500 mt-4 italic font-medium leading-relaxed">Web apps, mobile apps, APIs, payment integrations and the systems behind them, built end to end from first sketch to production. Have something that needs building? Let’s talk.</p>
             </div>
             <button
               onClick={() => setActiveModal('contact')}
-              className="bg-white text-black px-16 py-6 rounded-2xl text-lg font-black hover:bg-cyan-400 hover:text-black transition-all shadow-[0_0_40px_rgba(34,211,238,0.2)] active:scale-95 uppercase tracking-tighter"
+              className="shrink-0 whitespace-nowrap bg-white text-black px-16 py-6 rounded-2xl text-lg font-black hover:bg-cyan-400 hover:text-black transition-all shadow-[0_0_40px_rgba(34,211,238,0.2)] active:scale-95 uppercase tracking-tighter"
             >
               HIRE ME
             </button>
@@ -127,7 +127,7 @@ const App: React.FC = () => {
         onClose={() => setActiveModal('none')}
         title={
           activeModal === 'resume' ? 'Resume & Experience' :
-            activeModal === 'about' ? 'About Me (Not About Data 😄)' :
+            activeModal === 'about' ? 'About Me (Beyond The Code 😄)' :
               'Contact Me'
         }
       >

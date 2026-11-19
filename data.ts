@@ -4,24 +4,24 @@ export const JOURNEY_DATA: JourneyNode[] = [
   { id: '0', title: 'BSc Computer Science', caption: 'Academic foundation in systems, software engineering, and logic.', status: 'past', date: '2021' },
   { id: '1', title: 'Data Foundations', caption: 'SQL, Excel, & Statistical fundamentals.', status: 'past', date: '2022' },
   { id: '2', title: 'Automation & ETL', caption: 'Python pipelines for data optimization.', status: 'past', date: '2022' },
-  { id: '3', title: 'Analytics Systems', caption: 'Dashboards, BI, & strategic metrics.', status: 'past', date: '2023' },
+  { id: '3', title: 'Banking IT & Systems', caption: 'Supporting live banking platforms and operations at NetMFB.', status: 'past', date: '2023' },
   { id: '4', title: 'Intelligent Automation & Decision Support', caption: 'AI-assisted workflows, decision tools, and automation', status: 'past', date: '2024' },
-  { id: '5', title: 'Building AI Products', caption: 'Shipping real AI products — TrueFlow AI, TrueStay Insight, DigAjo & beyond.', status: 'present', date: '2025 — Now' },
+  { id: '5', title: 'Building Full Stack Products', caption: 'Shipping web, mobile and banking systems - DigAjo, TrueFlow AI, TrueStay Insight & beyond.', status: 'present', date: '2025 - Now' },
 ];
 
 export const PROJECTS: Project[] = [
   {
     id: 'p3',
-    title: 'DigAjo — Digital Ajo Savings Platform',
-    subtitle: 'Community Fintech · CTO',
+    title: 'DigAjo - Digital Ajo Savings App',
+    subtitle: 'Mobile App · Community Fintech · CTO',
     tldr: 'A mobile fintech app that digitizes the traditional Nigerian ajo/esusu savings practice — automating contributions, guaranteeing payouts, and bringing community savings into the modern financial system.',
     problem: 'Informal rotating savings groups (ajo/esusu) have no way to enforce contributions, track payments, or guarantee payouts. Missed contributions, lack of transparency, and manual coordination break trust and leave members exposed.',
     built: 'As CTO, I co-built DigAjo — a mobile app that automates the entire ajo cycle: scheduling contributions, collecting payments, distributing rotating payouts, and maintaining full transaction visibility for every member, built on a regulated Nigerian bank.',
     impact: [
       { metric: 'Payout Guarantee', value: '100%', description: 'Every member receives their payout — no missed rounds, no chasing.' },
+      { metric: 'Platform', value: 'Android + iOS', description: 'Live on Android and iOS.' },
       { metric: 'Manual Work', value: 'Eliminated', description: 'Contribution scheduling, reminders, and distribution fully automated.' },
-      { metric: 'Transparency', value: 'Full', description: 'All transactions visible to every group member in real time.' },
-      { metric: 'Platform', value: 'Android + iOS', description: 'Available on Android, iOS coming soon.' }
+      { metric: 'Transparency', value: 'Full', description: 'All transactions visible to every group member in real time.' }
     ],
     tools: ['Mobile', 'Fintech', 'Automation', 'Digital Payments', 'React Native'],
     image: 'digajo-og.png',
@@ -30,7 +30,7 @@ export const PROJECTS: Project[] = [
       situation: 'Ajo and esusu are generations-old community savings practices deeply embedded in Nigerian culture. But they run on trust, phone calls, and manual tracking — making them fragile. Missed contributions collapse entire cycles, and there is no accountability layer or financial infrastructure backing the system.',
       task: 'As CTO, design and build a mobile platform that preserves the social and cultural nature of ajo while solving its core reliability problems — guaranteeing contributions, automating payouts, and providing a transparent shared record for all members.',
       action: 'Built DigAjo as a mobile-first fintech product on a regulated Nigerian banking infrastructure. The platform handles: invite-only group creation with configurable contribution schedules; automated payment collection on synchronized dates; rotating payout distribution to each member in turn; full transaction visibility for all group members; a digital wallet for receiving and spending payouts; and a clean, minimal interface designed for all age groups familiar with the ajo tradition.',
-      result: '• Fully automated ajo cycles with zero manual coordination\n• Guaranteed payouts backed by regulated financial infrastructure\n• Complete transparency — every member sees every transaction\n• Cultural continuity — the product feels like ajo, not a bank\n• Available on Android with iOS launching soon',
+      result: '• Fully automated ajo cycles with zero manual coordination\n• Guaranteed payouts backed by regulated financial infrastructure\n• Complete transparency — every member sees every transaction\n• Cultural continuity — the product feels like ajo, not a bank\n• Available on Android and iOS',
       logic: '• When contribution date arrives, auto-debit all active members\n• If payment fails, retry and notify member\n• When all contributions are collected, distribute payout to the next member in the rotation\n• All transactions are logged and visible to every group member\n• Platform fee, CBN stamp duty, and standard bank charges only — no hidden fees',
       architecture: '• Mobile-first React Native app for Android and iOS\n• Regulated Nigerian banking infrastructure for payment processing\n• Automated contribution scheduling and payout distribution engine\n• Real-time transaction ledger shared across all group members\n• Digital wallet layer for payout receipt and spending\n• Invite-only group system with configurable rotation settings',
       metricsImproved: [

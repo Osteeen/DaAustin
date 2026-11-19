@@ -5,7 +5,7 @@ export const AboutContent: React.FC = () => {
     <div className="space-y-8 py-4">
       <div className="space-y-4">
         <p className="text-neutral-400 leading-relaxed">
-          When I’m not staring at dashboards or chasing weird bugs in data, I’m usually thinking about ideas, systems, and how things can be made better. I believe that data is just a story waiting to be told correctly.
+          When I’m not building apps or chasing weird bugs in code, I’m usually thinking about ideas, systems, and how things can be made better. I believe good software starts with understanding the problem properly.
         </p>
 
         <p className="text-neutral-400 leading-relaxed">
@@ -17,7 +17,7 @@ export const AboutContent: React.FC = () => {
         </p>
 
         <p className="text-neutral-400 leading-relaxed">
-          I enjoy quiet time, good conversations, exploring new tools, and occasionally disappearing into YouTube or Twitter threads that start with “I’ll just check this for 5 minutes.”
+          I enjoy quiet time, good conversations, exploring new frameworks and tools, and occasionally disappearing into YouTube or Twitter threads that start with “I’ll just check this for 5 minutes.”
         </p>
       </div>
 
